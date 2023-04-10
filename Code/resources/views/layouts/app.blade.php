@@ -26,9 +26,16 @@
     <div id="app">
         <nav class=" fixed-top navbar navbar-expand-md  shadow-sm"style="background-color:#D9D9D9;" >
             <div class="container">
-                <a class="navbar-brand bg-mutte" href="{{ url('/') }}">
+                @if (Route::has('login'))
+                <a class="navbar-brand bg-mutte" href="{{ url('/home') }}">
                  <h4> <b>LumbanBinanga.com</b></h4>
                   </a>
+                @else
+                  <a class="navbar-brand bg-mutte" href="{{ url('/') }}">
+                    <h4> <b>LumbanBinanga.com</b></h4>
+                     </a>
+                @endif
+                
                   
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -74,6 +81,7 @@
 
                         {{-- Jika sudah masuk tampilkan ini --}}
                         @else
+                        
                         <li class="nav-item dropdown text-dark px-2">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle text-dark " href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 <b>
@@ -92,7 +100,7 @@
                         </li>
 
                         <li class="nav-item px-2">
-                            <b><a class="nav-link text-dark" href="">Profil Desa</a></b>
+                            <b><a class="nav-link text-dark" href="{{route('profil_desa') }}">Profil Desa</a></b>
                              </li>  
 
 
