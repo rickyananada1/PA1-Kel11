@@ -12,6 +12,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -92,7 +93,7 @@
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="#">Pengelolaan Sampah</a>
                                 <a class="dropdown-item" href="#">Diskusi</a>
-                                <a class="dropdown-item" href="#">Kontak Kami</a>
+                                <a class="dropdown-item" href="/contactus">Kontak Kami</a>
                                 <a class="dropdown-item" href="#">Destinasi Wisata</a>
                             </div>
                             
@@ -118,7 +119,7 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-                                    <a class="dropdown-item" href="">Settings</a>
+                                    <a class="dropdown-item" href="/profiluser">Settings</a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf

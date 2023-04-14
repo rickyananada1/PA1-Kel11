@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProfilDesaController;
 use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\ProfilDesaController;
+use App\Http\Controllers\UpdateProfilInformationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +34,12 @@ Route::get('/profildesa', [App\Http\Controllers\ProfilDesaController::class, 'pr
 
 // Menampilkan Settings Profile
 Route::get('/profiluser', [App\Http\Controllers\ProfilController::class, 'profil'])->name('profil');
+
+// Menampilkan Contact Us Controller
+Route::get('/contactus',[ContactUsController::class, 'contactus'])->name('contactus');
+
+// Edit Profile
+
+Route::get('/profile',[UpdateProfilInformationController::class,'show_profile'])->name('show_profile');
+Route::post('/profile',[UpdateProfilInformationController::class,'edit_profile'])->name('edit_profile');
+
