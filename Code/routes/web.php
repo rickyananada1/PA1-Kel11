@@ -7,6 +7,9 @@ use App\Http\Controllers\TeamController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\SejarahGaleriController;
+use App\Http\Controllers\StrukturVisiMisiController;
+use App\Http\Controllers\contactuscontroller;
 
 
 /*
@@ -69,19 +72,17 @@ Route::get('news/delete/{id}',[NewsController::class,'Delete']);
 
 // Tampilan User Setelah login
 
+// Profil Desa (Sejarah)
+Route::get('home/sejarahgaleri',[SejarahGaleriController::class,'HomeSejarah'])->name('home.profildesa');
+
+
+// Profil Desa (Struktur)
+Route::get('home/struktur',[StrukturVisiMisiController::class,'HomeStruktur'])->name('home.strukturvisimisi');
 
 
 
-
-
-
-
-
-
-
-
-
-
+// Pengelolaan Sampah (Lokasi TPA)
+Route::get('home/lokasi',[PengelolaanSampahController::class,'HomeLokasi'])->name('home.pengelolaansampah');
 
 Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])->group(function () {
     Route::get('/dashboard', function () {
@@ -99,4 +100,10 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
     
     })->name('home');
 });
+
+// Admin contactus
+Route::get('/admin/contactus',[contactuscontroller::class,'Admincontactus'])->name('admin.contact');
+
+ 
+
 
