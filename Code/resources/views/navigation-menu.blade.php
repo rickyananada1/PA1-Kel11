@@ -14,26 +14,83 @@
                     <x-jet-nav-link href="{{ route('home') }}">
                       Home
                     </x-jet-nav-link>
-                    
+
+
+                    {{-- Profil Desa Dropdown Navbar --}}
+                    <x-jet-dropdown >
+                        <x-slot name="trigger">
+                            <div class="flex items-center" style="margin-top: 21px">
+                              <a href="#" >Profil Desa</a>
+                              <svg class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 13l-5-5h10l-5 5z" />
+                              </svg>
+                            </div>
+                          </x-slot>
+                
+                        <x-slot name="content">
+                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Tentang Kami
+                            </a>
+                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Layanan
+                            </a>
+                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Kontak
+                            </a>
+                        </x-slot>
+                    </x-jet-dropdown>
+
+
+
+
+
+                    {{-- Pengelolaan Sampah Dropdown Navbar --}}
+                    <x-jet-dropdown >
+                        <x-slot name="trigger">
+                            <div class="flex items-center" style="margin-top: 21px">
+                              <a href="#" >Pengelolaan Sampah</a>
+                              <svg class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 13l-5-5h10l-5 5z" />
+                              </svg>
+                            </div>
+                          </x-slot>
+                
+                        <x-slot name="content">
+                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Tentang Kami
+                            </a>
+                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Layanan
+                            </a>
+                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Kontak
+                            </a>
+                        </x-slot>
+                    </x-jet-dropdown>
+
+
+
+
+                    {{-- Destinasi Wisata Navbar --}}
                     <x-jet-nav-link href="{{ route('home') }}">
-                      Pengelolaan Sampah
-                    </x-jet-nav-link>
+                        Destinasi Wisata
+                      </x-jet-nav-link>
                     
+
+
+
+                    {{-- Diskusi Navbar --}}
                     <x-jet-nav-link href="{{ route('home') }}">
                       Diskusi
                     </x-jet-nav-link>
                     
+
+                    {{-- Kontak Kami Navbar --}}
                     <x-jet-nav-link href="{{ route('home') }}">
                       Kontak Kami
                     </x-jet-nav-link>
                     
-                    <x-jet-nav-link href="{{ route('home') }}">
-                      Destinasi Wisata
-                    </x-jet-nav-link>
-
-                    <x-jet-nav-link href="{{ route('home') }}">
-                      Profil Desa
-                    </x-jet-nav-link>
+              
                     
                   </div>
             </div>
