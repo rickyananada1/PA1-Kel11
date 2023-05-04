@@ -72,6 +72,16 @@
 
 
                     {{-- Destinasi Wisata Navbar --}}
+=======
+                    <x-jet-nav-link href="{{ route('home') }}">
+                      Profil Desa
+                    </x-jet-nav-link>
+
+                    <x-jet-nav-link href="{{ route('home') }}">
+                      Destinasi Wisata
+                    </x-jet-nav-link>
+                    
+
                     <x-jet-nav-link href="{{ route('home') }}">
                         Destinasi Wisata
                       </x-jet-nav-link>
@@ -89,8 +99,7 @@
                     <x-jet-nav-link href="{{ route('home') }}">
                       Kontak Kami
                     </x-jet-nav-link>
-                    
-              
+
                     
                   </div>
             </div>

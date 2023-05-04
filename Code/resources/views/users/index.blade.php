@@ -1,5 +1,6 @@
 
 
+
 <link rel="stylesheet" href="{{ asset('frontend/assets/vendor/animate.css/animate.min.css') }}">
 <link rel="stylesheet" href="{{ asset('frontend/assets/vendor/bootstrap/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('frontend/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}">
@@ -61,6 +62,15 @@
           </div>
         </div>
       </section>
+
+<x-app-layout>
+ <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            Hi <b>{{Auth::user()->name}}</b> Welcome To lumbanbinanga.com
+        </h2>
+    </x-slot> 
+    
+
 
     
     
