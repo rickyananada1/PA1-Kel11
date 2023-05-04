@@ -64,22 +64,22 @@
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                         data-target="#ui-elements" aria-expanded="false" aria-controls="ui-elements">
                         <i class="mdi mdi-folder-multiple-outline"></i>
-                        <span class="nav-text">Dashboard User</span> <b class="caret"></b>
+                        <span class="nav-text">Profil Desa</span> <b class="caret"></b>
                     </a>
                     <ul class="collapse" id="ui-elements" data-parent="#sidebar-menu">
                         <div class="sub-menu">
 
                             
                             <li class="active">
-                                <a class="sidenav-item-link" href="#">
-                                    <span class="nav-text">Contact Profile</span>
+                                <a class="sidenav-item-link" href="{{ route('home.profildesa') }}">
+                                    <span class="nav-text">Sejarah Desa</span>
 
                                 </a>
                             </li>
                             
                             <li class="active">
-                                <a class="sidenav-item-link" href="#">
-                                    <span class="nav-text">Contact Message</span>
+                                <a class="sidenav-item-link" href="{{route('home.strukturvisimisi')}}">
+                                    <span class="nav-text">Struktur / Visi & Misi</span>
 
                                 </a>
                             </li>
@@ -96,7 +96,7 @@
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                         data-target="#charts" aria-expanded="false" aria-controls="charts">
                         <i class="mdi mdi-chart-pie"></i>
-                        <span class="nav-text">Charts</span> <b class="caret"></b>
+                        <span class="nav-text">Pengelolaan Sampah</span> <b class="caret"></b>
                     </a>
                     <ul class="collapse" id="charts" data-parent="#sidebar-menu">
                         <div class="sub-menu">
@@ -104,8 +104,9 @@
 
 
                             <li>
-                                <a class="sidenav-item-link" href="chartjs.html">
-                                    <span class="nav-text">ChartJS</span>
+                                <a class="sidenav-item-link" href="#">
+                                    <span class="nav-text">Lokasi TPA</span>
+
 
                                 </a>
                             </li>
@@ -123,71 +124,27 @@
 
                 <li class="has-sub">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                        data-target="#pages" aria-expanded="false" aria-controls="pages">
-                        <i class="mdi mdi-image-filter-none"></i>
-                        <span class="nav-text">Pages</span> <b class="caret"></b>
+                        data-target="#ui-elements" aria-expanded="false" aria-controls="ui-elements">
+                        <i class="mdi mdi-folder-multiple-outline"></i>
+                        <span class="nav-text">Contact</span> <b class="caret"></b>
                     </a>
-                    <ul class="collapse" id="pages" data-parent="#sidebar-menu">
+                    <ul class="collapse" id="ui-elements" data-parent="#sidebar-menu">
                         <div class="sub-menu">
 
-
-
-                            <li>
-                                <a class="sidenav-item-link" href="user-profile.html">
-                                    <span class="nav-text">User Profile</span>
+                            
+                            <li class="active">
+                                <a class="sidenav-item-link" href="{{ route('home.profildesa') }}">
+                                    <span class="nav-text">Sejarah Desa</span>
 
                                 </a>
                             </li>
+                            
+                            <li class="active">
+                                <a class="sidenav-item-link" href="{{route('home.strukturvisimisi')}}">
+                                    <span class="nav-text">Struktur / Visi & Misi</span>
 
-
-
-
-
-                            <li class="has-sub">
-                                <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                    data-target="#authentication" aria-expanded="false"
-                                    aria-controls="authentication">
-                                    <span class="nav-text">Authentication</span> <b class="caret"></b>
                                 </a>
-                                <ul class="collapse" id="authentication">
-                                    <div class="sub-menu">
-
-                                        <li>
-                                            <a href="sign-in.html">Sign In</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="sign-up.html">Sign Up</a>
-                                        </li>
-
-                                    </div>
-                                </ul>
                             </li>
-
-
-
-
-                            <li class="has-sub">
-                                <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                    data-target="#others" aria-expanded="false" aria-controls="others">
-                                    <span class="nav-text">Others</span> <b class="caret"></b>
-                                </a>
-                                <ul class="collapse" id="others">
-                                    <div class="sub-menu">
-
-                                        <li>
-                                            <a href="invoice.html">invoice</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="error.html">Error</a>
-                                        </li>
-
-                                    </div>
-                                </ul>
-                            </li>
-
-
 
                         </div>
                     </ul>

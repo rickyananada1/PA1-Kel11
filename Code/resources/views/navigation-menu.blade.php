@@ -14,6 +14,14 @@
                     <x-jet-nav-link href="{{ route('home') }}">
                       Home
                     </x-jet-nav-link>
+
+                    <x-jet-nav-link href="{{ route('home') }}">
+                      Profil Desa
+                    </x-jet-nav-link>
+
+                    <x-jet-nav-link href="{{ route('home') }}">
+                      Destinasi Wisata
+                    </x-jet-nav-link>
                     
                     <x-jet-nav-link href="{{ route('home') }}">
                       Pengelolaan Sampah
@@ -27,13 +35,9 @@
                       Kontak Kami
                     </x-jet-nav-link>
                     
-                    <x-jet-nav-link href="{{ route('home') }}">
-                      Destinasi Wisata
-                    </x-jet-nav-link>
+             
 
-                    <x-jet-nav-link href="{{ route('home') }}">
-                      Profil Desa
-                    </x-jet-nav-link>
+            
                     
                   </div>
             </div>

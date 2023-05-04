@@ -4,9 +4,7 @@
             Hi <b>{{Auth::user()->name}}</b> Welcome To lumbanbinanga.com
         </h2>
     </x-slot> 
-
-
-  
+    
 
     
 </x-app-layout>
