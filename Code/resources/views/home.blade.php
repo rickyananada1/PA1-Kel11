@@ -255,60 +255,7 @@
     </div>
     <!-- End Rviews Section -->
 
-    {{-- Latest News --}}
-    <!-- ======= News Section ======= -->
-    <div id="blog" class="blog-area">
-        <div class="blog-inner area-padding">
-            <div class="blog-overly"></div>
-            <div class="container ">
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div class="section-headline text-center">
-                            <h2>Latest News</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
 
-                    @foreach ($news as $berita)
-                        
-                    <!-- Start Left Blog -->
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <div class="single-blog">
-                            <div class="single-blog-img">
-                                <a href="blog.html">
-                                    <img src="{{$berita->image}}" alt="">
-                                </a>
-                            </div>
-                            <div class="blog-meta">
-                            
-                                <span class="date-type">
-                                    <i class="fa fa-calendar"></i>{{$berita->created_at}}
-                                </span>
-                            </div>
-                            <div class="blog-text">
-                                <h4>
-                                    <a href="#">{{$berita->title}}</a>
-                                </h4>
-                                <p>
-                                    {{$berita->description}}
-                                </p>
-                            </div>
-                            <span>
-                                {{-- Direct ke login kalau belum login, dan langsung menuju ke navbar berita --}}
-                                <a href="#" class="ready-btn">Read more</a>
-                            </span>
-                        </div>
-                        <!-- Start single blog -->
-                    </div>
-                    <!-- End Left Blog-->
-
-                    @endforeach
-
-                </div>
-            </div>
-        </div>
-    </div><!-- End Blog Section -->
 @endsection
 
 

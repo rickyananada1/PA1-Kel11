@@ -16,14 +16,14 @@
 
             <ul class="nav sidebar-inner" id="sidebar-menu">
 
-                {{-- Home Section Sidebar --}}
+                {{-- Home  Sidebar --}}
                 <li class="has-sub active expand">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                         data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
-                        <i class="mdi mdi-view-dashboard-outline"></i>
+                        <i class="mdi mdi-home"></i>
                         <span class="nav-text">Home</span> <b class="caret"></b>
                     </a>
-                    <ul class="collapse show" id="dashboard" data-parent="#sidebar-menu">
+                    <ul class="collapse " id="dashboard" data-parent="#sidebar-menu">
                         <div class="sub-menu">
                             {{-- Menu Update Slider --}}
                             <li class="active">
@@ -47,23 +47,17 @@
                             </li>
 
 
-                            <li class="active">
-                                <a class="sidenav-item-link" href="{{route('home.news')}}">
-                                    <span class="nav-text">Home News</span>
-                                </a>
-                            </li>
+                            
                         </div>
                     </ul>
                 </li>
 
 
-
-
-                {{-- Dashboard User Section Siderbar --}}
-                <li class="has-sub">
+                {{-- Profil Desa Sidebar --}}
+                <li class="has-sub active ">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                         data-target="#ui-elements" aria-expanded="false" aria-controls="ui-elements">
-                        <i class="mdi mdi-folder-multiple-outline"></i>
+                        <i class="mdi mdi-home-modern"></i>
                         <span class="nav-text">Profil Desa</span> <b class="caret"></b>
                     </a>
                     <ul class="collapse" id="ui-elements" data-parent="#sidebar-menu">
@@ -71,16 +65,27 @@
 
                             
                             <li class="active">
-                                <a class="sidenav-item-link" href="{{ route('home.profildesa') }}">
-                                    <span class="nav-text">Sejarah Desa</span>
+                                <a class="sidenav-item-link" href="{{route('home.struktur')}}">
+                                    <span class="nav-text">Struktur Desa</span>
 
                                 </a>
                             </li>
                             
                             <li class="active">
-                                <a class="sidenav-item-link" href="{{route('home.strukturvisimisi')}}">
-                                    <span class="nav-text">Struktur / Visi & Misi</span>
-
+                                <a class="sidenav-item-link" href="{{route('home.visimisi')}}">
+                                    <span class="nav-text">Visi & Misi Desa</span>
+                                </a>
+                            </li>
+                            
+                            <li class="active">
+                                <a class="sidenav-item-link" href="{{route('home.galeri')}}">
+                                    <span class="nav-text">Galeri Desa</span>
+                                </a>
+                            </li>
+                            
+                            <li class="active">
+                                <a class="sidenav-item-link" href="#">
+                                    <span class="nav-text">Sejarah Desa (Belum) </span>
                                 </a>
                             </li>
 
@@ -89,60 +94,38 @@
                 </li>
 
 
-
-
-
-                <li class="has-sub">
+                {{-- Pengelolaan Sampah Sidebar --}}
+                <li class="has-sub active ">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                         data-target="#charts" aria-expanded="false" aria-controls="charts">
-                        <i class="mdi mdi-chart-pie"></i>
+                        <i class="mdi mdi-recycle"></i>
                         <span class="nav-text">Pengelolaan Sampah</span> <b class="caret"></b>
                     </a>
                     <ul class="collapse" id="charts" data-parent="#sidebar-menu">
                         <div class="sub-menu">
 
 
+                            <li>
+                                <a class="sidenav-item-link" href="#">
+                                    <span class="nav-text">Jenis - Jenis Sampah</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="sidenav-item-link" href="#">
+                                    <span class="nav-text">3R</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="sidenav-item-link" href="#">
+                                    <span class="nav-text">Jadwal Pengambilan Sampah</span>
+                                </a>
+                            </li>
 
                             <li>
                                 <a class="sidenav-item-link" href="#">
                                     <span class="nav-text">Lokasi TPA</span>
-
-
-                                </a>
-                            </li>
-
-
-
-
-                        </div>
-                    </ul>
-                </li>
-
-
-
-
-
-                <li class="has-sub">
-                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                        data-target="#ui-elements" aria-expanded="false" aria-controls="ui-elements">
-                        <i class="mdi mdi-folder-multiple-outline"></i>
-                        <span class="nav-text">Contact</span> <b class="caret"></b>
-                    </a>
-                    <ul class="collapse" id="ui-elements" data-parent="#sidebar-menu">
-                        <div class="sub-menu">
-
-                            
-                            <li class="active">
-                                <a class="sidenav-item-link" href="{{ route('home.profildesa') }}">
-                                    <span class="nav-text">Sejarah Desa</span>
-
-                                </a>
-                            </li>
-                            
-                            <li class="active">
-                                <a class="sidenav-item-link" href="{{route('home.strukturvisimisi')}}">
-                                    <span class="nav-text">Struktur / Visi & Misi</span>
-
                                 </a>
                             </li>
 
@@ -151,160 +134,71 @@
                 </li>
 
 
-
-
-
-                <li class="has-sub">
+                {{-- Contacts Sidebar --}}
+                <li class="has-sub active">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
                         data-target="#documentation" aria-expanded="false" aria-controls="documentation">
-                        <i class="mdi mdi-book-open-page-variant"></i>
-                        <span class="nav-text">Documentation</span> <b class="caret"></b>
+                        <i class="mdi mdi-account-group"></i>
+                        <span class="nav-text">Contacts</span> <b class="caret"></b>
                     </a>
                     <ul class="collapse" id="documentation" data-parent="#sidebar-menu">
                         <div class="sub-menu">
 
-
-
-                            <li class="section-title">
-                                Getting Started
+                            <li>
+                                <a class="sidenav-item-link" href="#">
+                                    <span class="nav-text">Contact Profil</span>
+                                </a>
                             </li>
-
-
-
-
-
 
                             <li>
-                                <a class="sidenav-item-link" href="introduction.html">
-                                    <span class="nav-text">Introduction</span>
-
+                                <a class="sidenav-item-link" href="#">
+                                    <span class="nav-text">Contact Message</span>
                                 </a>
                             </li>
-
-
-
-
-
-
-                            <li>
-                                <a class="sidenav-item-link" href="setup.html">
-                                    <span class="nav-text">Setup</span>
-
-                                </a>
-                            </li>
-
-
-
-
-
-
-                            <li>
-                                <a class="sidenav-item-link" href="customization.html">
-                                    <span class="nav-text">Customization</span>
-
-                                </a>
-                            </li>
-
-
-
-
-
-
-                            <li class="section-title">
-                                Layouts
-                            </li>
-
-
-
-
-
-                            <li class="has-sub">
-                                <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                    data-target="#headers" aria-expanded="false" aria-controls="headers">
-                                    <span class="nav-text">Layout Headers</span> <b class="caret"></b>
-                                </a>
-                                <ul class="collapse" id="headers">
-                                    <div class="sub-menu">
-
-                                        <li>
-                                            <a href="header-fixed.html">Header Fixed</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="header-static.html">Header Static</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="header-light.html">Header Light</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="header-dark.html">Header Dark</a>
-                                        </li>
-
-                                    </div>
-                                </ul>
-                            </li>
-
-
-
-
-                            <li class="has-sub">
-                                <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                                    data-target="#sidebar-navs" aria-expanded="false" aria-controls="sidebar-navs">
-                                    <span class="nav-text">layout Sidebars</span> <b class="caret"></b>
-                                </a>
-                                <ul class="collapse" id="sidebar-navs">
-                                    <div class="sub-menu">
-
-                                        <li>
-                                            <a href="sidebar-open.html">Sidebar Open</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="sidebar-minimized.html">Sidebar Minimized</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="sidebar-offcanvas.html">Sidebar Offcanvas</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="sidebar-with-footer.html">Sidebar With Footer</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="sidebar-without-footer.html">Sidebar Without Footer</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="right-sidebar.html">Right Sidebar</a>
-                                        </li>
-
-                                    </div>
-                                </ul>
-                            </li>
-
-
-
-
-
-                            <li>
-                                <a class="sidenav-item-link" href="rtl.html">
-                                    <span class="nav-text">RTL Direction</span>
-
-                                </a>
-                            </li>
-
-
-
 
                         </div>
                     </ul>
                 </li>
 
+                {{-- Destinasi & Berita Sidebar --}}
+                <li class="has-sub active ">
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                        data-target="#destinasiberita" aria-expanded="false" aria-controls="charts">
+                        <i class="mdi mdi-map-marker"></i>
+                        <span class="nav-text">Destinasi & Berita</span> <b class="caret"></b>
+                    </a>
+                    <ul class="collapse" id="destinasiberita" data-parent="#sidebar-menu">
+                        <div class="sub-menu">
+                            <li>
+                                <a class="sidenav-item-link" href="{{route('home.destinasi')}}">
+                                    <span class="nav-text">Destinasi Wisata</span>
+                                </a>
+                            </li>
+                        
+                        </div>
+                    </ul>
+                </li>
 
+                {{--Komentar --}}
+                <li class="has-sub active ">
+                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
+                        data-target="#komentar" aria-expanded="false" aria-controls="charts">
+                        <i class="mdi mdi-comment-multiple-outline"></i>
+                        <span class="nav-text">Komentar</span> <b class="caret"></b>
+                    </a>
+                    <ul class="collapse" id="komentar" data-parent="#sidebar-menu">
+                        <div class="sub-menu">
+                            <li>
+                                <a class="sidenav-item-link" href="{{route('home.destinasi')}}">
+                                    <span class="nav-text">#</span>
+                                </a>
+                            </li>
+                          
+                        </div>
+                    </ul>
+                </li>
 
+               
             </ul>
 
         </div>

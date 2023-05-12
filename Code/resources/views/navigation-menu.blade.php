@@ -28,13 +28,16 @@
                 
                         <x-slot name="content">
                             <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                Tentang Kami
+                                Sejarah Desa
                             </a>
                             <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                Layanans
+                                Visi & Misi
                             </a>
                             <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                                Kontak
+                                Struktur Desa
+                            </a>
+                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                                Galeri
                             </a>
                         </x-slot>
                     </x-jet-dropdown>
@@ -68,14 +71,14 @@
 
                 
 
-                    <x-jet-nav-link href="{{ route('home') }}">
+                    <x-jet-nav-link href="{{ route('destinasi') }}">
                       Destinasi Wisata
                     </x-jet-nav-link>
                     
 
                     {{-- Diskusi Navbar --}}
-                    <x-jet-nav-link href="{{ route('home') }}">
-                      Diskusi
+                    <x-jet-nav-link href="{{route('forums')}}">
+                      Forum
                     </x-jet-nav-link>
                     
 
@@ -224,14 +227,18 @@
         
                 <x-slot name="content">
                     <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Tentang Kami
+                        Sejarah Desa
                     </a>
                     <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Layanans
+                        Visi & Misi
                     </a>
                     <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Kontak
+                        Struktur Desa
                     </a>
+                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Galeri
+                    </a>
+
                 </x-slot>
             </x-jet-dropdown>
 

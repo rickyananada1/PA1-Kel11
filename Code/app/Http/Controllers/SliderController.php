@@ -140,8 +140,6 @@ class SliderController extends Controller
 
 
 
-    public function asd(){
-        return view('asd');
-    }
+    
 
 }

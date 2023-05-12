@@ -26,6 +26,7 @@
         <link rel="stylesheet" href="{{ asset('frontend/assets/vendor/boxicons/css/boxicons.min.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/assets/vendor/glightbox/css/glightbox.min.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/assets/vendor/swiper/swiper-bundle.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('frontend/assets/vendor/animate.css/animate.min.css') }}">
 
         <!-- Template Main CSS File -->
         <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css') }}">
@@ -67,14 +68,19 @@
 
 {{-- Javascript --}}
 
-  <!-- Vendor JS Files -->
+  <!--  JS Files -->
   <script src="{{ asset('frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}" defer></script>
   <script src="{{ asset('frontend/assets/vendor/glightbox/js/glightbox.min.js') }}" defer></script>
   <script src="{{ asset('frontend/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}" defer></script>
   <script src="{{ asset('frontend/assets/vendor/swiper/swiper-bundle.min.js') }}" defer></script>
   <script src="{{ asset('frontend/assets/vendor/php-email-form/validate.js') }}" defer></script>
-
-  <!-- Template Main JS File -->
+  <script src="{{ asset('frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}" defer></script>
+  <script src="{{ asset('frontend/assets/vendor/glightbox/js/glightbox.min.js') }}" defer></script>
+  <script src="{{ asset('frontend/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}" defer></script>
+  <script src="{{ asset('frontend/assets/vendor/swiper/swiper-bundle.min.js') }}" defer></script>
+  <script src="{{ asset('frontend/assets/vendor/php-email-form/validate.js') }}" defer></script>
+  
+  <!-- Main JS File -->
   <script src="{{ asset('frontend/assets/js/main.js') }}" defer></script>
 
 
