@@ -16,9 +16,9 @@ class CreateKomentarsTable extends Migration
         Schema::create('komentars', function (Blueprint $table) {
             $table->id();
             $table->text('konten');
-            $table->integer('user_id');
-            $table->integer('forum_id');
-            $table->integer('parent')->default(false);
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('forum_id')->constrained('forums')->onDelete('cascade')->onUpdate('cascade');
+            $table->boolean('parent')->default(false);
             $table->timestamps();
         });
     }
@@ -33,3 +33,4 @@ class CreateKomentarsTable extends Migration
         Schema::dropIfExists('komentars');
     }
 }
+

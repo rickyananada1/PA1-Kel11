@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-white border-b border-gray-100 ">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 " style="margin-bottom: 20px; margin-top: 10px">
@@ -10,16 +10,16 @@
                 </div>
 
                 <!-- Navbar -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('home') }}">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex  ">
+                    <x-jet-nav-link href="{{ route('home') }}" class="text-decoration-none">
                       Home
                     </x-jet-nav-link>
 
                     {{-- Profil Desa Dropdown Navbar --}}
                     <x-jet-dropdown >
                         <x-slot name="trigger">
-                            <div class="flex items-center" style="margin-top: 21px">
-                              <a href="#" >Profil Desa</a>
+                            <div class="flex items-center  " style="margin-top: 21px">
+                              <a href="#" class="text-decoration-none text-secondary " >Profil Desa</a>
                               <svg class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M10 13l-5-5h10l-5 5z" />
                               </svg>
@@ -27,16 +27,16 @@
                           </x-slot>
                 
                         <x-slot name="content">
-                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                                 Sejarah Desa
                             </a>
-                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                                 Visi & Misi
                             </a>
-                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary" >
                                 Struktur Desa
                             </a>
-                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                                 Galeri
                             </a>
                         </x-slot>
@@ -45,8 +45,8 @@
                     {{-- Pengelolaan Sampah Dropdown Navbar --}}
                     <x-jet-dropdown >
                         <x-slot name="trigger">
-                            <div class="flex items-center" style="margin-top: 21px">
-                              <a href="#" >Pengelolaan Sampah</a>
+                            <div class="flex items-center " style="margin-top: 21px" >
+                              <a href="#" class="text-decoration-none text-secondary">Pengelolaan Sampah</a>
                               <svg class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M10 13l-5-5h10l-5 5z" />
                               </svg>
@@ -54,13 +54,13 @@
                           </x-slot>
                 
                         <x-slot name="content">
-                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                                 Tentang Kami
                             </a>
-                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                                 Layanan
                             </a>
-                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                                 Kontak
                             </a>
                         </x-slot>
@@ -71,19 +71,19 @@
 
                 
 
-                    <x-jet-nav-link href="{{ route('destinasi') }}">
+                    <x-jet-nav-link href="{{ route('destinasi') }} " class="text-decoration-none text-secondary">
                       Destinasi Wisata
                     </x-jet-nav-link>
                     
 
                     {{-- Diskusi Navbar --}}
-                    <x-jet-nav-link href="{{route('forums')}}">
+                    <x-jet-nav-link href="{{route('forums')}}" class="text-decoration-none text-secondary">
                       Forum
                     </x-jet-nav-link>
                     
 
                     {{-- Kontak Kami Navbar --}}
-                    <x-jet-nav-link href="{{ route('home') }}">
+                    <x-jet-nav-link href="{{ route('home') }}" class="text-decoration-none text-secondary">
                       Kontak Kami
                     </x-jet-nav-link>
 
@@ -165,11 +165,11 @@
 
                         <x-slot name="content">
                             <!-- Account Management -->
-                            <div class="block px-4 py-2 text-xs text-gray-400">
+                            <div class="block px-4 py-2 text-xs text-gray-400 text-decoration-none text-secondary">
                                 {{ __('Manage Account') }}
                             </div>
 
-                            <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                            <x-jet-dropdown-link href="{{ route('profile.show') }} " class="text-decoration-none text-secondary">
                                 {{ __('Profile') }}
                             </x-jet-dropdown-link>
 
@@ -182,11 +182,11 @@
                             <div class="border-t border-gray-100"></div>
 
                             <!-- Authentication -->
-                            <form method="POST" action="{{ route('logout') }}" x-data>
+                            <form method="POST" action="{{ route('logout') }}" x-data >
                                 @csrf
 
-                                <x-jet-dropdown-link href="{{ route('logout') }}"
-                                         @click.prevent="$root.submit();">
+                                <x-jet-dropdown-link href="{{ route('logout') }} "
+                                         @click.prevent="$root.submit();" class="text-decoration-none text-secondary">
                                     {{ __('Log Out') }}
                                 </x-jet-dropdown-link>
                             </form>
@@ -209,8 +209,8 @@
 
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
-            <x-jet-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+        <div class="pt-2 pb-3 space-y-1 ">
+            <x-jet-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')" class="text-decoration-none text-secondary">
             Home
             </x-jet-responsive-nav-link>
             
@@ -218,7 +218,7 @@
             <x-jet-dropdown >
                 <x-slot name="trigger">
                     <div class="flex items-center" style="margin-top: 21px">
-                      <a href="#" class="px-3">Profil Desa</a>
+                      <a href="#" class="px-3 text-decoration-none text-secondary">Profil Desa</a>
                       <svg class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10 13l-5-5h10l-5 5z" />
                       </svg>
@@ -226,16 +226,16 @@
                   </x-slot>
         
                 <x-slot name="content">
-                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary" >
                         Sejarah Desa
                     </a>
-                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                         Visi & Misi
                     </a>
-                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                         Struktur Desa
                     </a>
-                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                         Galeri
                     </a>
 
@@ -248,7 +248,7 @@
             <x-jet-dropdown >
                 <x-slot name="trigger">
                     <div class="flex items-center" style="margin-top: 21px">
-                      <a href="#"  class="px-3">Pengelolaan Sampah</a>
+                      <a href="#"  class="px-3 text-decoration-none text-secondary">Pengelolaan Sampah</a>
                       <svg class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10 13l-5-5h10l-5 5z" />
                       </svg>
@@ -256,13 +256,13 @@
                   </x-slot>
         
                 <x-slot name="content">
-                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                         Tentang Kami
                     </a>
-                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                         Layanan
                     </a>
-                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                         Kontak
                     </a>
                 </x-slot>
@@ -270,19 +270,19 @@
 
             
 
-            <x-jet-responsive-nav-link href="{{ route('home') }}">
+            <x-jet-responsive-nav-link href="{{ route('destinasi') }}" class="text-decoration-none text-secondary">
                 Destinasi Wisata
               </x-jet-responsive-nav-link>
               
 
               {{-- Diskusi Navbar --}}
-              <x-jet-responsive-nav-link href="{{ route('home') }}">
+              <x-jet-responsive-nav-link href="{{ route('home') }}" class="text-decoration-none text-secondary">
                 Diskusi
               </x-jet-responsive-nav-link>
               
 
               {{-- Kontak Kami Navbar --}}
-              <x-jet-responsive-nav-link href="{{ route('home') }}">
+              <x-jet-responsive-nav-link href="{{ route('home') }}" class="text-decoration-none text-secondary">
                 Kontak Kami
               </x-jet-responsive-nav-link>
 
@@ -325,7 +325,7 @@
                 <form method="POST" action="{{ route('logout') }}" x-data>
                     @csrf
 
-                    <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                    <x-jet-responsive-nav-link href="{{ route('logout') }} "
                                    @click.prevent="$root.submit();">
                         {{ __('Log Out') }}
                     </x-jet-responsive-nav-link>
@@ -365,3 +365,4 @@
         </div>
     </div>
 </nav>
+

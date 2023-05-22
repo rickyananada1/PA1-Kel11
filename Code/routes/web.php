@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ForumController;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\SliderController;
@@ -123,15 +124,35 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
 
     })->name('home');
 
-    // Route::get('/destinasi',function(){
-    //     $destinasis = DB::table('destinasis')->get();
-    //     return view('users.destinasi',compact('destinasis'));
-    // })->name('destinasi');
+    Route::get('/destinasi',function(){
+        $destinasis = DB::table('destinasis')->get();
+        return view('users.destinasi',compact('destinasis'));
+    })->name('destinasi');
+
+ 
+
+    // Route Forums
+    Route::get('/forum',[ForumController::class,'index'])->name('forums');
+    Route::post('/forum/create',[ForumController::class,'create'])->name('forum.create');
+    Route::get('/forum/{forum}/view', [ForumController::class, 'view'])->name('forum.view');
+    Route::post('/forum/{forum}/view', [ForumController::class, 'postkomentar']);
+
+    Route::delete('/komentar/{id}', [ForumController::class,'destroy'])->name('komentar.destroy');
 
 
+    Route::get('/komentar/{id}/edit', [ForumController::class,'edit'])->name('komentar.edit');
+    Route::put('/komentar/{id}', [ForumController::class,'update'])->name('komentar.update');
 
+
+    Route::get('/forum/{forum}/edit', [ForumController::class,'editUtama'])->name('forum.edit');
+    Route::put('/forum/{forum}', [ForumController::class,'updateUtama'])->name('forum.update');
+    Route::delete('/forum/{forum}', [ForumController::class,'HapusUtama'])->name('forum.destroy');
+
+    Route::get('/forums/{forum}/edit', [ForumController::class,'editFORUM'])->name('forum.edit.utama');
+    Route::put('/forums/{forum}', [ForumController::class,'updateFORUM'])->name('forum.update.utama');
 
 });
+
 Route::view('/destinasi/pantai', 'users.destinasi.pantai_destinasi')->name('pantai_destinasi');
 
 // Admin contactus

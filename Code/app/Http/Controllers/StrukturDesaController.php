@@ -117,4 +117,6 @@ class StrukturDesaController extends Controller
             ->back()
             ->with('success', 'Struktur Deleted Successfully');
     }
+
+
 }
