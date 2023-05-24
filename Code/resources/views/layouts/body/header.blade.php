@@ -17,7 +17,7 @@
          <div class="container d-flex justify-content-between">
 
          <div class="logo">
-             <h1><a href="index.html"><span>lumbanbinanga</span>.com</a></h1>
+             <h1><a href="#hero"><span>lumbanbinanga</span>.com</a></h1>
              <!-- Uncomment below if you prefer to use an image logo -->
              <!-- <a href="index.html"><img src="frontend/assets/img/logo.png" alt="" class="img-fluid"></a>-->
          </div>

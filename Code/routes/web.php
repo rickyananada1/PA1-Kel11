@@ -11,7 +11,7 @@ use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\VisiMisiController;
-use App\Http\Controllers\contactuscontroller;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DestinasiController;
 use App\Http\Controllers\StrukturDesaController;
 use App\Http\Controllers\SejarahGaleriController;
@@ -34,7 +34,7 @@ Route::get('/', function () {
     return view('home',compact('abouts','teams'));
 });
 
-// FRONT END BEFORE LOGIN
+// FRONTEND BEFORE LOGIN
 
 // Slider
 Route::get('home/slider',[SliderController::class,'HomeSlider'])->name('home.slider');
@@ -151,12 +151,25 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
     Route::get('/forums/{forum}/edit', [ForumController::class,'editFORUM'])->name('forum.edit.utama');
     Route::put('/forums/{forum}', [ForumController::class,'updateFORUM'])->name('forum.update.utama');
 
+
+
+    // Contact Page
+    Route::get('/contact',[ContactController::class,'Contact'])->name('contact');
+    Route::post('/contact/form',[ContactController::class,'ContactForm'])->name('contact.form');
+
+
+
+
 });
 
 Route::view('/destinasi/pantai', 'users.destinasi.pantai_destinasi')->name('pantai_destinasi');
 
-// Admin contactus
-Route::get('/admin/contactus',[contactuscontroller::class,'Admincontactus'])->name('admin.contact');
+// Admin contact
+Route::get('/admin/contact',[ContactController::class,'AdminContact'])->name('admin.contact');
+Route::get('/admin/add/contact',[ContactController::class,'AdminAddContact'])->name('add.contact');
+Route::post('/admin/store/contact',[ContactController::class,'AdminStoreContact'])->name('store.contact');
+Route::get('/admin/message',[ContactController::class,'AdminMessage'])->name('admin.message');
+
 
  
 

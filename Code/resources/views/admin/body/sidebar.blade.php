@@ -135,27 +135,27 @@
 
 
                 {{-- Contacts Sidebar --}}
-                <li class="has-sub active">
+                <li class="has-sub active ">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                        data-target="#documentation" aria-expanded="false" aria-controls="documentation">
-                        <i class="mdi mdi-account-group"></i>
-                        <span class="nav-text">Contacts</span> <b class="caret"></b>
+                        data-target="#ui-elementss" aria-expanded="false" aria-controls="ui-elementss">
+                        <i class="mdi mdi-folder-multiple-outline"></i>
+                        <span class="nav-text">Contact Pages</span> <b class="caret"></b>
                     </a>
-                    <ul class="collapse" id="documentation" data-parent="#sidebar-menu">
+                    <ul class="collapse" id="ui-elementss" data-parent="#sidebar-menu">
                         <div class="sub-menu">
 
-                            <li>
-                                <a class="sidenav-item-link" href="#">
+                            
+                            <li class="active">
+                                <a class="sidenav-item-link" href="{{ route('admin.contact') }}">
                                     <span class="nav-text">Contact Profil</span>
                                 </a>
                             </li>
-
-                            <li>
-                                <a class="sidenav-item-link" href="#">
+                            
+                            <li class="active">
+                                <a class="sidenav-item-link" href="{{ route('admin.message') }}">
                                     <span class="nav-text">Contact Message</span>
                                 </a>
                             </li>
-
                         </div>
                     </ul>
                 </li>

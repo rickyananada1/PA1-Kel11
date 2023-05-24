@@ -83,7 +83,7 @@
                     
 
                     {{-- Kontak Kami Navbar --}}
-                    <x-jet-nav-link href="{{ route('home') }}" class="text-decoration-none text-secondary">
+                    <x-jet-nav-link href="{{ route('contact') }}" class="text-decoration-none text-secondary">
                       Kontak Kami
                     </x-jet-nav-link>
 

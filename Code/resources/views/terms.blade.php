@@ -12,6 +12,3 @@
     </div>
 </x-guest-layout>
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. In, minima!
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae quae eum, a itaque saepe nostrum?
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam asperiores saepe cupiditate ex at nostrum voluptate, nobis placeat quasi reiciendis!
