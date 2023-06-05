@@ -2,20 +2,22 @@
 
 @section('home_content')
     <!-- ======= About Section ======= -->
-    <div id="about" class="about-area area-padding">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <div id="about" class="about-area area-padding"   >
 
 
-
-        <div class="container">
-            <div class="row">
+        <div class="container" >
+            <div class="row" >
                 <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="section-headline text-center">
+                    <div class="section-headline text-center" >
                         <h2>About</h2>
 
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" >
                 <!-- single-well start-->
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="well-left">
@@ -74,7 +76,7 @@
 
             <div class="row text-center">
                 <!-- Start Left services -->
-                <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-right"data-aos-duration="800" data-aos-delay="200">
                     <div class="about-move">
                         <div class="services-details">
                             <div class="single-services">
@@ -93,7 +95,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-right"data-aos-duration="900" data-aos-delay="300">
                     <div class="about-move">
                         <div class="services-details">
                             <div class="single-services">
@@ -111,7 +113,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-right"data-aos-duration="1000" data-aos-delay="400">
                     <!-- end col-md-4 -->
                     <div class=" about-move">
                         <div class="services-details">
@@ -130,7 +132,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-left"data-aos-duration="1300" data-aos-delay="700">
                     <!-- end col-md-4 -->
                     <div class=" about-move">
                         <div class="services-details">
@@ -150,7 +152,7 @@
                 <!-- End Left services -->
 
 
-                <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-left"data-aos-duration="1200" data-aos-delay="600">
                     <!-- end col-md-4 -->
 
 
@@ -171,7 +173,7 @@
                     </div>
                 </div>
                 <!-- End Left services -->
-                <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-left"data-aos-duration="1100" data-aos-delay="500">
                     <!-- end col-md-4 -->
                     <div class=" about-move">
                         <div class="services-details">
@@ -196,7 +198,7 @@
     <!-- End Feature Section -->
 
     <!-- ======= Destination Section ======= -->
-    <div id="team" class="our-team-area area-padding">
+    <div id="team" class="our-team-area area-padding" >
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
@@ -206,19 +208,19 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" >
                 @foreach ($teams as $team)
                     <div class="col-md-3 col-sm-3 col-xs-12">
                         <div class="single-team-member">
                             <div class="team-img">
                                 <a href="{{ asset($team->image) }}" class="team-img-popup">
                                     <img src="{{ asset($team->image) }}" class="img-fluid"
-                                        style="width: 100%; height: 360px;">
+                                        style="width: 100%; height: 300px;">
                                 </a>
 
                             </div>
 
-                            <div class="team-content text-center">
+                            <div class="team-content text-center " style="height: 150px">
                                 <h4>{{ $team->name }}</h4>
                                 <p>{{ $team->role }}</p>
                             </div>
@@ -234,8 +236,8 @@
 
     {{-- PANTAI LUMBAN BINANGA (Description) --}}
     <!-- ======= Rviews Section ======= -->
-    <div style="background-color: #000000">
-        <div class="row g-0">
+    <div style="background-color: #000000" >
+        <div class="row g-0" >
             <div class="col-lg-6"> <br><br> <br>
                 <img src="frontend/assets/pantai.jpeg" width="950px" style="height: 600px; padding-bottom: 70px">
             </div>
@@ -246,13 +248,15 @@
                     <h6 class="text-white ">Salah satu ciri khas dari desa lumban binaga, dimana memiliki pemandangan yang
                         sangat indah, sehingga anda bisa meilihat pemandangan danau toba dan perbukitan yang sangat terbuka
                     </h6>
-                    <a href="#contact" class="ready-btn scrollto">More</a>
+                    <a href="/register" class="ready-btn scrollto">More</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- End Rviews Section -->
-
+    <script>
+        AOS.init();
+      </script>
 
 @endsection
 

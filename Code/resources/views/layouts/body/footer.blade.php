@@ -3,7 +3,6 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
-<!-- ======= Suscribe Section ======= -->
 <div class="suscribe-area">
     <div class="container">
         <div class="row">

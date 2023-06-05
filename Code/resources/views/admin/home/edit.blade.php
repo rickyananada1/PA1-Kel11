@@ -1,7 +1,4 @@
 @extends('admin.admin_master')
-
-
-
 @section('admin')
     <div class="py-12">
 
@@ -12,7 +9,7 @@
                         <div class="card-header">Edit About</div>
                         <div class="card-body">
 
-                            <form action="{{ url('about/update/' . $abouts->id) }}" method="POST">
+                            <form action="{{ url('about/update/' . $abouts->id) }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <input type="hidden" name="old_image" value="{{ $abouts->image }}">
 
@@ -50,11 +47,12 @@
 
                                 {{-- Image --}}
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Edit Brand Image</label>
+                                    <label for="exampleInputEmail1">Edit About Image</label>
                                     <input type="file" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp" placeholder="Enter email" name="about_image">
+                                        aria-describedby="emailHelp" placeholder="Enter email" name="image"
+                                        value="{{ $abouts->image }}">
 
-                                    @error('about_image')
+                                    @error('image')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>

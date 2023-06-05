@@ -14,9 +14,8 @@
             </div>
         @endif
 
-        <section class="vh-100">
-
-            <div class="container h-100">
+        <section class="vh-100"style="background-image: url('assets5/pantai.png')">
+            <div class="container h-100" >
                 <div class="row d-flex justify-content-center align-items-center h-100">
                   <x-jet-validation-errors  />
 
@@ -86,8 +85,8 @@
                                 </div>
                                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp" class="img-fluid" alt="Sample image">
-
+                                    {{-- <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp" class="img-fluid" alt="Sample image"> --}}
+                                    <img src="assets5/PA1-LumbanBinanga.png" width="70%" style="margin-left: 130px; padding-bottom: 5px" class="rounded">
                                 </div>
 
                             </div>

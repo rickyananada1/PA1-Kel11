@@ -33,4 +33,16 @@ class CreateNewUser implements CreatesNewUsers
             'password' => Hash::make($input['password']),
         ]);
     }
+
+    protected function validator(array $input)
+{
+    return Validator::make($input, [
+        // Existing validation rules...
+
+    ])->after(function ($validator) {
+        if ($validator->fails()) {
+            Toastr::error($validator->errors()->first(), 'Registration Error');
+        }
+    });
+}
 }

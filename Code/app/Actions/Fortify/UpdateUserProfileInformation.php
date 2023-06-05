@@ -56,4 +56,16 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
 
         $user->sendEmailVerificationNotification();
     }
+
+    protected function validator(array $input)
+{
+    return Validator::make($input, [
+        // Existing validation rules...
+
+    ])->after(function ($validator) {
+        if ($validator->fails()) {
+            Toastr::error($validator->errors()->first(), 'Update Error');
+        }
+    });
+}
 }

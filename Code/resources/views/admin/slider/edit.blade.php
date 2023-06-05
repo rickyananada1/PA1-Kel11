@@ -1,9 +1,5 @@
 @extends('admin.admin_master')
-
-
-
 @section('admin')
-    
     <div class="py-12">
 
         <div class="container">
@@ -51,7 +47,7 @@
                                   <input type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="image" 
                                   value="{{ $sliders->image }}">
 
-                                  @error('mage')
+                                  @error('image')
                                   {{-- {{$message}} dibawah merupakan bawaan dari blade --}}
                                       <span class="text-danger">{{ $message }}</span>
                                   @enderror

@@ -6,7 +6,7 @@
 />
 
 <link href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css" rel="stylesheet" />
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 <style>
 
 .equal-input {
@@ -16,10 +16,11 @@
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
         </x-slot>
-
-        <x-jet-validation-errors class="mb-4" />
         
-        <section class="vh-100" style="background-color: #eee;">
+        {{-- style="background-color: rgb(24, 110, 150)" --}}
+        <x-jet-validation-errors class="mb-4" />
+        <div style="background-image: url('assets5/pantai.png')">
+        <section class="vh-100" >
             <div class="container h-100">
               <div class="row d-flex justify-content-center align-items-center h-100">
                   <div class="card text-black" style="border-radius: 25px;">
@@ -106,8 +107,8 @@
     </div>
     <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-        class="img-fluid" alt="Sample image">
+        <img src="assets5/PA1-LumbanBinanga.png" width="70%" style="margin-left: 130px; padding-bottom: 5px" class="rounded">
+
 
     </div>
 
@@ -124,12 +125,28 @@
 
         </section>
 
+    </div>
+
+
 
 <script
   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
   crossorigin="anonymous"
 ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<link rel="stylesheet" href="{{ asset('vendor/toastr/toastr.min.css') }}">
+
+
+
+<script src="{{ asset('vendor/toastr/toastr.min.js') }}"></script>
+@if ($errors->any())
+    <script>
+        @foreach ($errors->all() as $error)
+            toastr.error("{{ $error }}", "Validation Error");
+        @endforeach
+    </script>
+@endif
 
 <script>
    document.getElementById("togglePassword").addEventListener("click", function() {
@@ -161,6 +178,8 @@ document.getElementById("toggleConfirmPassword").addEventListener("click", funct
         confirmEyeIcon.classList.add("mdi-eye");
     }
 });
+
+
 
 
 

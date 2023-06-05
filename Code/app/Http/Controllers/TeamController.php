@@ -66,7 +66,7 @@ class TeamController extends Controller
     public function Update(Request $request, $id){
         $validateData = $request->validate([
             'name' => 'required|min:4',
-            'role' => 'required|max:100|min:4',
+            'role' => 'required|min:4',
         ],[
             'title.required' => 'Title Tidak Boleh Kosong',
             'title.min' => 'Title harus memiliki setidaknya 4 karakter',
