@@ -7,7 +7,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Untree.co">
-    <link rel="shortcut icon" href="favicon.png">
     <meta name="description" content="" />
     <meta name="keywords" content="bootstrap, bootstrap5" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +22,6 @@
     <link rel="stylesheet" href="{{asset('assets2/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets2/css/flatpickr.min.css')}}">
     
-      <title>Blogy &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
     </head>
     <body>
     
@@ -38,11 +36,11 @@
     
      
     
-      <div class="hero overlay inner-page bg-primary py-4">
+      <div class="hero overlay inner-page py-4" style="background-color:#032A3B">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center ">
             <div class="col-lg-6">
-              <h1 class="heading text-white mb-3" data-aos="fade-up">Destinasi Wisata & News</h1>
+              <h1 class="heading text-white pt-2" data-aos="fade-up">Destinasi Wisata & News</h1>
             </div>
           </div>
         </div>
@@ -54,27 +52,20 @@
           <div class="row posts-entry">
             <div class="col-lg-8">
     
-              {{-- @foreach ($destinasis as $destinasi) --}}
-                  
-
-    
+              @foreach ($destinasis as $destinasi)  
               <div class="blog-entry d-flex blog-entry-search-item">
                 <a href="single.html" class="img-link me-4">
-                  <img src="assets2/images/img_1_sq.jpg" alt="Image" class="img-fluid">
+                  <img src="{{$destinasi->image}}" alt="Image" class="img-fluid " style="width: 400px; height: 200px;">
                 </a>
                 <div>
-                  <span class="date">Apr. 14th, 2022 &bullet; <a href="#">Business</a></span>
-                  <h2><a href="single.html">Pantai Desa Lumban Binanga</a></h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel voluptas.</p>
-                  <p><a href="{{route('pantai_destinasi')}}" class="btn btn-sm btn-outline-primary">Read More</a></p>
+                  <span class="date">{{$destinasi->created_at}}</span>
+                  <h2><a href="single.html">{{$destinasi->title}}</a></h2>
+                  <p><a href="{{$destinasi->href}}" class="btn btn-sm btn-outline-primary">Read More</a></p>
                 </div>
               </div>
-    
-          
-              {{-- @endforeach --}}
-    
-    
             </div>
+            <hr style="height: 3px">
+            @endforeach
     
        
     

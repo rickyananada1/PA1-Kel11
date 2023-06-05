@@ -1,16 +1,16 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100 ">
+<nav x-data="{ open: false }" class="border-b border-gray-100 p-2 " style="background-color:white ; margin-top: -10px; margin-bottom: -1px">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 " style="margin-bottom: 20px; margin-top: 10px">
             <div class="flex">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
+                <div class="shrink-0 flex items-center mt-2" >
                 <img src="{{asset('logo/lumbanbinanga.jpeg')}}" width="120">
             </a>
                 </div>
 
                 <!-- Navbar -->
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex  ">
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex mt-2">
                     <x-jet-nav-link href="{{ route('home') }}" class="text-decoration-none">
                       Home
                     </x-jet-nav-link>
@@ -18,8 +18,8 @@
                     {{-- Profil Desa Dropdown Navbar --}}
                     <x-jet-dropdown >
                         <x-slot name="trigger">
-                            <div class="flex items-center  " style="margin-top: 21px">
-                              <a href="#" class="text-decoration-none text-secondary " >Profil Desa</a>
+                            <div class="flex items-center  " style="margin-top: 19px">
+                              <a href="#" class="text-decoration-none text-secondary">Profil Desa</a>
                               <svg class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M10 13l-5-5h10l-5 5z" />
                               </svg>
@@ -27,23 +27,23 @@
                           </x-slot>
                 
                         <x-slot name="content">
-                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
+                            <a href="/sejarah/desa" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                                 Sejarah Desa
                             </a>
-                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
+                            <a href="/visimisi/desa" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                                 Visi & Misi
                             </a>
-                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary" >
+                            <a href="/struktur/desa" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary" >
                                 Struktur Desa
                             </a>
-                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
+                            <a href="/galeri/desa" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                                 Galeri
                             </a>
                         </x-slot>
                     </x-jet-dropdown>
 
                     {{-- Pengelolaan Sampah Dropdown Navbar --}}
-                    <x-jet-dropdown >
+                    {{-- <x-jet-dropdown >
                         <x-slot name="trigger">
                             <div class="flex items-center " style="margin-top: 21px" >
                               <a href="#" class="text-decoration-none text-secondary">Pengelolaan Sampah</a>
@@ -52,24 +52,17 @@
                               </svg>
                             </div>
                           </x-slot>
-                
-                        <x-slot name="content">
-                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
-                                Tentang Kami
-                            </a>
-                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
-                                Layanan
-                            </a>
-                            <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
-                                Kontak
-                            </a>
-                        </x-slot>
-                    </x-jet-dropdown>
+                    </x-jet-dropdown> --}}
 
 
 
 
                 
+
+                    <x-jet-nav-link href="/pengelolaan/sampah" class="text-decoration-none text-secondary">
+                      Pengelolaan Sampah
+                    </x-jet-nav-link>
+                    
 
                     <x-jet-nav-link href="{{ route('destinasi') }} " class="text-decoration-none text-secondary">
                       Destinasi Wisata
@@ -226,26 +219,25 @@
                   </x-slot>
         
                 <x-slot name="content">
-                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary" >
+                    <a href="/sejarah/desa" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                         Sejarah Desa
                     </a>
-                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
+                    <a href="/visimisi/desa" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                         Visi & Misi
                     </a>
-                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
+                    <a href="/struktur/desa" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary" >
                         Struktur Desa
                     </a>
-                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
+                    <a href="/galeri/desa" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
                         Galeri
                     </a>
-
                 </x-slot>
             </x-jet-dropdown>
 
 
 
             {{-- Pengelolaan Sampah Dropdown Navbar --}}
-            <x-jet-dropdown >
+            {{-- <x-jet-dropdown >
                 <x-slot name="trigger">
                     <div class="flex items-center" style="margin-top: 21px">
                       <a href="#"  class="px-3 text-decoration-none text-secondary">Pengelolaan Sampah</a>
@@ -266,26 +258,31 @@
                         Kontak
                     </a>
                 </x-slot>
-            </x-jet-dropdown>
+            </x-jet-dropdown> --}}
 
-            
+                                
+
+            <x-jet-responsive-nav-link href="/pengelolaan/sampah" class="text-decoration-none text-secondary">
+                Pengelolaan Sampah
+
+              </x-jet-responsive-nav-link>
 
             <x-jet-responsive-nav-link href="{{ route('destinasi') }}" class="text-decoration-none text-secondary">
                 Destinasi Wisata
               </x-jet-responsive-nav-link>
               
 
+
               {{-- Diskusi Navbar --}}
-              <x-jet-responsive-nav-link href="{{ route('home') }}" class="text-decoration-none text-secondary">
-                Diskusi
+              <x-jet-responsive-nav-link href="{{route('forums')}}" class="text-decoration-none text-secondary">
+                Forum
               </x-jet-responsive-nav-link>
               
 
               {{-- Kontak Kami Navbar --}}
-              <x-jet-responsive-nav-link href="{{ route('home') }}" class="text-decoration-none text-secondary">
+              <x-jet-responsive-nav-link href="{{ route('contact') }}" class="text-decoration-none text-secondary">
                 Kontak Kami
               </x-jet-responsive-nav-link>
-
 
 
 

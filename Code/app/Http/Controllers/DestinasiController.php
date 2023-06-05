@@ -46,6 +46,7 @@ class DestinasiController extends Controller
             'title' => $request->title,
             'short_des' => $request->short_des,
             'long_des' => $request->long_des,
+            'href'=>$request->href,
             'image'=> $last_img,
             'created_at' => Carbon::now(),
         ]);
@@ -65,8 +66,10 @@ class DestinasiController extends Controller
     public function Update(Request $request, $id){
         $validateData = $request->validate([
             'title' => 'required|min:4',
-            'short_des' => 'required|max:255',
+            'short_des' => 'required',
             'long_des' => 'required',
+            'href'=>'required',
+
         ]);
 
 
@@ -92,6 +95,7 @@ class DestinasiController extends Controller
             'title' => $request->title,
             'short_des' => $request->short_des,
             'long_des' => $request->long_des,
+            'href'=>$request->href,
             'image' => $last_img,
             'created_at' => Carbon::now(),
         ]);
@@ -105,6 +109,7 @@ class DestinasiController extends Controller
             'title' => $request->title,
             'short_des' => $request->short_des,
             'long_des' => $request->long_des,
+            'href'=>$request->href,
             'created_at' => Carbon::now(),
         ]); 
     

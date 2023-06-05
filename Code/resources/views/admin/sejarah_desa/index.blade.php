@@ -14,7 +14,9 @@ maka tampilkan keseluruhan index ini ketika pengguna memilih home_brand yang ada
             <div class="row">
                 <div class="col-md-12">
 
-                    <a href="{{route('add.destinasi')}}" class="btn btn-info">Add Destinasi</a>
+                    <h4>Home About</h4>
+                    <br>
+                    <a href="{{route('add.sejarah')}}" class="btn btn-info">Add Visi & Misi</a>
                     <br><br>
                     <div class="card">
 
@@ -29,15 +31,12 @@ maka tampilkan keseluruhan index ini ketika pengguna memilih home_brand yang ada
                             
                         @endif
 
-                        <div class="card-header">All Destinasi</div>
+                        <div class="card-header">All Visi & Misi</div>
                         <table class="table">
                             <thead>
                                 <tr>
                                     <th scope="col" width="5%">No</th>
-                                    <th scope="col" width="10%">Title</th>
-                                    <th scope="col" width="15%">Short Descriptions</th>
-                                    <th scope="col" width="25%">Long Descriptions</th>
-                                    <th scope="col" width="15%">Image</th>
+                                    <th scope="col" width="25%">Sejarah</th>
                                     <th scope="col" width="15%">Action</th>
                                 </tr>
                             </thead>
@@ -45,24 +44,17 @@ maka tampilkan keseluruhan index ini ketika pengguna memilih home_brand yang ada
                                     @php($i = 1)
 
                                 {{-- $categories merupakan hasil passingan dari compact categoris yang ada di category controller --}}
-                                @foreach ($destinasis as $destinasi)
+                                @foreach ($sejarahs as $sejarah)
                                 <tr>
                                     {{-- {{ $categories->firstItem()+$loop->index }} Agar data berurutan --}}
                                     <th scope="row"> {{ $i++ }} </th>
                                     {{-- lalu didefinisikan menjadi $category->nama_field table categoriesnya  --}}
-                                    <td> {{ $destinasi->title}} </td>
-                                    <td> {{ $destinasi->short_des}} </td>
-                                    <td> {{ $destinasi->long_des}} </td>
-                                    <td> {{ $destinasi->href}} </td>
-                                    
-                                    {{-- Menggunakan Model --}}
-                                  <td>  <img src="{{ asset($destinasi->image) }}" style="height: 40px; width: 70px">
+                                    <td> {{ $sejarah->sejarah_desa}} </td>
                                   </td>
-
                                     <td>
                                         {{-- url digunakan untuk menspesikifikan data mana yang mau diupdate dari idnya sendiri --}}
-                                        <a href="{{ url('destinasi/edit/'.$destinasi->id) }}" class="btn btn-info">Edit</a>
-                                        <a href="{{ url('destinasi/delete/'.$destinasi->id) }}" onclick="return confirm('Are You Sure U Want To Delete The Data')" 
+                                        <a href="{{ url('sejarah/edit/'.$sejarah->id) }}" class="btn btn-info">Edit</a>
+                                        <a href="{{ url('sejarah/delete/'.$sejarah->id) }}" onclick="return confirm('Are You Sure U Want To Delete The Slider')" 
                                             class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>

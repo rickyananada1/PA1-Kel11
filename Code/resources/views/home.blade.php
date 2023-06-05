@@ -19,7 +19,7 @@
                 <!-- single-well start-->
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="well-left">
-                        <div class="single-well">
+                        <div class="single-well"    >
                             <a href="#">
 
                                 {{-- Image --}}
@@ -47,10 +47,8 @@
 
                                 {{-- Long Description --}}
                                 <li>
-                                    <i class="bi bi-check text-secondary fw-bold ">{{ $abouts->long_des }}</i>
+                                    <p class=" fw-bold" style="font-size: 16px">{{ $abouts->long_des }}</p>
                                 </li>
-
-
                             </ul>
                         </div>
                     </div>

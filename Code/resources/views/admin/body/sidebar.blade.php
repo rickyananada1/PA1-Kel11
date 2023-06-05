@@ -84,8 +84,8 @@
                             </li>
                             
                             <li class="active">
-                                <a class="sidenav-item-link" href="#">
-                                    <span class="nav-text">Sejarah Desa (Belum) </span>
+                                <a class="sidenav-item-link" href="{{route('home.sejarah')}}">
+                                    <span class="nav-text">Sejarah Desa </span>
                                 </a>
                             </li>
 
@@ -94,44 +94,7 @@
                 </li>
 
 
-                {{-- Pengelolaan Sampah Sidebar --}}
-                <li class="has-sub active ">
-                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                        data-target="#charts" aria-expanded="false" aria-controls="charts">
-                        <i class="mdi mdi-recycle"></i>
-                        <span class="nav-text">Pengelolaan Sampah</span> <b class="caret"></b>
-                    </a>
-                    <ul class="collapse" id="charts" data-parent="#sidebar-menu">
-                        <div class="sub-menu">
-
-
-                            <li>
-                                <a class="sidenav-item-link" href="#">
-                                    <span class="nav-text">Jenis - Jenis Sampah</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="sidenav-item-link" href="#">
-                                    <span class="nav-text">3R</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="sidenav-item-link" href="#">
-                                    <span class="nav-text">Jadwal Pengambilan Sampah</span>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a class="sidenav-item-link" href="#">
-                                    <span class="nav-text">Lokasi TPA</span>
-                                </a>
-                            </li>
-
-                        </div>
-                    </ul>
-                </li>
+                
 
 
                 {{-- Contacts Sidebar --}}
@@ -179,26 +142,6 @@
                     </ul>
                 </li>
 
-                {{--Komentar --}}
-                <li class="has-sub active ">
-                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse"
-                        data-target="#komentar" aria-expanded="false" aria-controls="charts">
-                        <i class="mdi mdi-comment-multiple-outline"></i>
-                        <span class="nav-text">Komentar</span> <b class="caret"></b>
-                    </a>
-                    <ul class="collapse" id="komentar" data-parent="#sidebar-menu">
-                        <div class="sub-menu">
-                            <li>
-                                <a class="sidenav-item-link" href="{{route('home.destinasi')}}">
-                                    <span class="nav-text">#</span>
-                                </a>
-                            </li>
-                          
-                        </div>
-                    </ul>
-                </li>
-
-               
             </ul>
 
         </div>

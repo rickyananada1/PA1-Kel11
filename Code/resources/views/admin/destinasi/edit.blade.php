@@ -55,6 +55,17 @@
                                       <span class="text-danger">{{ $message }}</span>
                                   @enderror
                                 </div>
+
+                                <div class="form-group">
+                                  <label for="exampleInputEmail1">Edit Destinasi Href</label>
+                                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="href" 
+                                  value="{{ $destinasis->href }}">
+
+                                  @error('href')
+                                  {{-- {{$message}} dibawah merupakan bawaan dari blade --}}
+                                      <span class="text-danger">{{ $message }}</span>
+                                  @enderror
+                                </div>
                                
                                 {{-- Image --}}
                                 <div class="form-group">

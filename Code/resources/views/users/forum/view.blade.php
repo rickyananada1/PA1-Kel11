@@ -157,28 +157,18 @@
                             <img src="{{ url('storage/' . $forum->user->profile_photo_path) }}"
                                 class="img-circle pull-left avatar"
                                 style="width: 60px; height: 60px; margin-right: 10px;">
-                          
-                                <h3 class="pt-3 fw-bold">{{ $forum->user->name }} 
+                                <h3 class="pt-3 fw-bold">
+                                    {{ $forum->user->name }}
                                     @if ($forum->user_id === auth()->user()->id)
-                            
-                                    <div style="float: right">
-                                        <div class="bg-primary p-1 rounded ">
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                                            Edit Forum Title And Content&nbsp;
-                                        </button>
+                                        <div class="text-end mt-2">
+                                            <div class="bg-primary p-1 rounded d-inline-block">
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                                    Edit Forum Title And Content
+                                                </button>
+                                            </div>
                                         </div>
-
-
-
-                                        
-                                    </div>
-
-@endif
-
-                                    
-
-                            </h3>
-
+                                    @endif
+                                </h3>
                             <hr style="border: none;
                                 border-top: 3px solid #000;">
 

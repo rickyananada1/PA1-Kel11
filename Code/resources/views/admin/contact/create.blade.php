@@ -23,7 +23,7 @@
                         <textarea class="form-control" name="address" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
 
-                    <div class="form-footer pt-4 pt-5 mt-4 border-top">
+                    <div class="form-footer pt-4 mt-4 border-top">
                         <button type="submit" class="btn btn-primary btn-default">Submit</button>
                     </div>
                 </form>

@@ -1316,9 +1316,6 @@ section {
   padding: 30px;
 }
 
-.contact .info {
-  background: #eaeaea;
-}
 
 .contact .info i {
   font-size: 20px;
@@ -1326,7 +1323,7 @@ section {
   float: left;
   width: 44px;
   height: 44px;
-  border: 1px solid #1c3874;
+  border: 1px solid #007bff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1350,7 +1347,7 @@ section {
 }
 
 .contact .info:hover i {
-  background: #361bbd;
+  background: #007bff;
   color: #fff;
 }
 

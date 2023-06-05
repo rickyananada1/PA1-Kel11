@@ -11,8 +11,6 @@
 
 
         <!-- Favicons -->
-        <link rel="stylesheet" href="{{ asset('frontend/assets/img/favicon.png') }}">
-        <link rel="stylesheet" href="{{ asset('frontend/assets/img/apple-touch-icon.png') }}">
 
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">

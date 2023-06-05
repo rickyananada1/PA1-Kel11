@@ -137,6 +137,9 @@ class SliderController extends Controller
     }
 
 
+    public function Home(){
+        return view('home');
+    }
 
 
 

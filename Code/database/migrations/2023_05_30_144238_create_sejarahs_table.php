@@ -15,6 +15,7 @@ class CreateSejarahsTable extends Migration
     {
         Schema::create('sejarahs', function (Blueprint $table) {
             $table->id();
+            $table->string('sejarah_desa');
             $table->timestamps();
         });
     }
