@@ -39,10 +39,7 @@ class ForumController extends Controller
             return redirect()->back()->with('error', 'Komentar tidak ditemukan.');
         }
 
-        // Memeriksa apakah pengguna yang sedang login adalah pemilik komentar
-        if ($komentar->user_id !== auth()->user()->id) {
-            return redirect()->back()->with('error', 'Anda tidak diizinkan menghapus komentar ini.');
-        }
+      
 
         // Hapus komentar
         $komentar->delete();
@@ -60,10 +57,7 @@ class ForumController extends Controller
             return redirect()->back()->with('error', 'Komentar tidak ditemukan.');
         }
 
-        // Memeriksa apakah pengguna yang sedang login adalah pemilik komentar
-        if ($komentar->user_id !== auth()->user()->id) {
-            return redirect()->back()->with('error', 'Anda tidak diizinkan mengedit komentar ini.');
-        }
+        
 
         return view('users.forum.view', compact('komentar'));
     }
@@ -77,10 +71,7 @@ class ForumController extends Controller
             return redirect()->back()->with('error', 'Komentar tidak ditemukan.');
         }
 
-        // Memeriksa apakah pengguna yang sedang login adalah pemilik komentar
-        if ($komentar->user_id !== auth()->user()->id) {
-            return redirect()->back()->with('error', 'Anda tidak diizinkan mengedit komentar ini.');
-        }
+     
 
         // Validasi data yang diterima dari form
         $request->validate([
@@ -139,11 +130,7 @@ class ForumController extends Controller
             return redirect()->back()->with('error', 'Forum tidak ditemukan.');
         }
     
-        // Memeriksa apakah pengguna yang sedang login adalah pemilik forum
-        if ($forum->user_id !== auth()->user()->id) {
-            return redirect()->back()->with('error', 'Anda tidak diizinkan mengedit forum ini.');
-        }
-    
+       
         return view('users.forum.view', compact('forum'));
     }
         

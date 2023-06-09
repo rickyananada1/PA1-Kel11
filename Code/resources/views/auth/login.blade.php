@@ -1,7 +1,8 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
-    <link href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css" rel="stylesheet" />
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+<link href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css" rel="stylesheet" />
+<link rel="icon" href="assets5/beach.png">
+<title>Login</title>
+    
 
 <body style="background-color: #f0f0f0;">
     <x-guest-layout>
@@ -14,14 +15,18 @@
             </div>
         @endif
 
-        <section class="vh-100"style="background-image: url('assets5/pantai.png')">
+        <section class="vh-100" style="background-image: url('assets5/tes1.jpeg')" >
             <div class="container h-100" >
                 <div class="row d-flex justify-content-center align-items-center h-100">
-                  <x-jet-validation-errors  />
+                   
+                    <div id="validation-errors" style="display:none">
+                        <x-jet-validation-errors />
+                    </div>
+                    
+                    
+                    <div class="card text-black" style="border-radius: 25px; background-color: rgb(255, 255, 255)" >
 
-                    <div class="card text-black" style="border-radius: 25px;">
-
-                        <div class="card-body p-md-5 p-5">
+                        <div class="card-body p-md-5 p-5" >
                             <div class="row justify-content-center">
                                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
@@ -85,7 +90,6 @@
                                 </div>
                                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                                    {{-- <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp" class="img-fluid" alt="Sample image"> --}}
                                     <img src="assets5/PA1-LumbanBinanga.png" width="70%" style="margin-left: 130px; padding-bottom: 5px" class="rounded">
                                 </div>
 
@@ -125,7 +129,15 @@
     }
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var validationErrors = document.getElementById('validation-errors');
+    var errorMessage = validationErrors.innerText.trim();
 
+    if (errorMessage !== '') {
+        alert(errorMessage);
+        validationErrors.innerHTML = '';
+    }
+});
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

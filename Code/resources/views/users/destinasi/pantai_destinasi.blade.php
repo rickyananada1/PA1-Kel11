@@ -38,12 +38,10 @@
             </div>
             <div class="site-mobile-menu-body"></div>
         </div>
-
-
         <div class="site-cover site-cover-sm same-height overlay single-page"
-            style="background-image: url('{{ asset('assets2/images/hero_5.jpg') }}');">
+            style="background-image: url('{{ asset('assets2/images/hero_8.jpg') }}');">
             <div class="container">
-                <div class="row same-height justify-content-center">
+                <div class="row same-height justify-content-c   enter">
                     <div class="">
                         <div class="post-entry text-center">
                             <h1 class="mb-4">Destinasi Wisata | Pantai Lumban Binanga</h1>
@@ -61,12 +59,12 @@
 
                     <div class="col-md-12 col-lg-12 main-content">
                         <div class="post-content-body">
-                            <p>Desa Lumban Binanga adalah sebuah desa yang terletak di kecamatan Toba Samosir, Sumatera Utara, Indonesia. Desa ini memiliki luas wilayah sekitar [x] kilometer persegi dan jumlah penduduk sekitar [y] jiwa. Desa Lumban Binanga terletak di dataran tinggi yang dikelilingi oleh pegunungan dan danau, memberikan pemandangan alam yang indah.</p>
+                            <p class="fs-5">Desa Lumban Binanga adalah sebuah desa yang terletak di kecamatan Toba Samosir, Sumatera Utara, Indonesia. Desa ini memiliki luas wilayah sekitar [x] kilometer persegi dan jumlah penduduk sekitar [y] jiwa. Desa Lumban Binanga terletak di dataran tinggi yang dikelilingi oleh pegunungan dan danau, memberikan pemandangan alam yang indah.</p>
 
-                            <p>Desa Lumban Binanga memiliki sejarah yang kaya dan merupakan bagian dari wilayah kebudayaan Batak Toba. Masyarakat desa ini mayoritas bermata pencaharian sebagai petani, nelayan, dan pedagang. Mereka menggantungkan hidup dari hasil pertanian seperti padi, jagung, sayuran, serta hasil perikanan dari danau di sekitarnya.
+                            <p class="fs-5">Desa Lumban Binanga memiliki sejarah yang kaya dan merupakan bagian dari wilayah kebudayaan Batak Toba. Masyarakat desa ini mayoritas bermata pencaharian sebagai petani, nelayan, dan pedagang. Mereka menggantungkan hidup dari hasil pertanian seperti padi, jagung, sayuran, serta hasil perikanan dari danau di sekitarnya.
                             </p>
 
-                            <p>QSelain kegiatan pertanian, Desa Lumban Binanga juga memiliki potensi pariwisata yang menarik. Keindahan alamnya, seperti pegunungan yang hijau dan Danau Toba yang luas, membuat desa ini menjadi tujuan wisata yang menarik bagi wisatawan lokal maupun mancanegara. Beberapa objek wisata yang terkenal di sekitar Desa Lumban Binanga antara lain [nama objek wisata], yang menawarkan keindahan alam dan kegiatan rekreasi yang menarik.</p>
+                            <p class="fs-5">Selain kegiatan pertanian, Desa Lumban Binanga juga memiliki potensi pariwisata yang menarik. Keindahan alamnya, seperti pegunungan yang hijau dan Danau Toba yang luas, membuat desa ini menjadi tujuan wisata yang menarik bagi wisatawan lokal maupun mancanegara. Beberapa objek wisata yang terkenal di sekitar Desa Lumban Binanga antara lain [nama objek wisata], yang menawarkan keindahan alam dan kegiatan rekreasi yang menarik.</p>
 
 
                             <div class="row">
@@ -77,11 +75,11 @@
                             </div>
                             
                             
-                            <p>Masyarakat Desa Lumban Binanga sangat menjunjung tinggi adat dan budaya Batak Toba. Mereka memiliki berbagai tradisi dan acara adat yang dijalankan secara turun temurun, seperti upacara perkawinan adat, adat istiadat dalam menghormati orang tua, serta berbagai festival dan perayaan keagamaan yang menjadi bagian penting dari kehidupan masyarakat desa.
+                            <p class="fs-5">Masyarakat Desa Lumban Binanga sangat menjunjung tinggi adat dan budaya Batak Toba. Mereka memiliki berbagai tradisi dan acara adat yang dijalankan secara turun temurun, seperti upacara perkawinan adat, adat istiadat dalam menghormati orang tua, serta berbagai festival dan perayaan keagamaan yang menjadi bagian penting dari kehidupan masyarakat desa.
 
                             </p>
-                            <p>Pemerintahan desa di Lumban Binanga berupaya untuk meningkatkan kualitas hidup masyarakat dengan mengembangkan infrastruktur, pendidikan, dan kesehatan. Terdapat juga program-program pembangunan ekonomi yang bertujuan untuk meningkatkan kesejahteraan masyarakat desa.</p>
-                            <p>Dengan keindahan alam, kekayaan budaya, dan keramahan masyarakatnya, Desa Lumban Binanga merupakan tempat yang menarik untuk dikunjungi dan mengenal lebih jauh tentang kehidupan masyarakat Batak Toba.</p>
+                            <p class="fs-5">Pemerintahan desa di Lumban Binanga berupaya untuk meningkatkan kualitas hidup masyarakat dengan mengembangkan infrastruktur, pendidikan, dan kesehatan. Terdapat juga program-program pembangunan ekonomi yang bertujuan untuk meningkatkan kesejahteraan masyarakat desa.</p>
+                            <p class="fs-5">Dengan keindahan alam, kekayaan budaya, dan keramahan masyarakatnya, Desa Lumban Binanga merupakan tempat yang menarik untuk dikunjungi dan mengenal lebih jauh tentang kehidupan masyarakat Batak Toba.</p>
                             
                         </div>
 
@@ -96,16 +94,9 @@
                 </div>
         </section>
 
+        @include('partials._footer')
 
 
-
-        <!-- Preloader -->
-        <div id="overlayer"></div>
-        <div class="loader">
-            <div class="spinner-border text-primary" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        </div>
 
 
         <script src="{{ asset('assets2/js/bootstrap.bundle.min.js') }}"></script>

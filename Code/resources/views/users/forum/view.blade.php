@@ -143,13 +143,11 @@
                 float: left !important;
             }
         </style>
-
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
     </head>
 
     <body>
-        <div class="main ">
+        <div class="main text-dark">
             <div class="col-md-12">
                 <div class="panel">
                     <div class="panel panel-headline">
@@ -157,41 +155,34 @@
                             <img src="{{ url('storage/' . $forum->user->profile_photo_path) }}"
                                 class="img-circle pull-left avatar"
                                 style="width: 60px; height: 60px; margin-right: 10px;">
-                                <h3 class="pt-3 fw-bold">
-                                    {{ $forum->user->name }}
-                                    @if ($forum->user_id === auth()->user()->id)
-                                        <div class="text-end mt-2">
-                                            <div class="bg-primary p-1 rounded d-inline-block">
-                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                                                    Edit Forum Title And Content
-                                                </button>
-                                            </div>
+                            <h3 class="pt-3 fw-bold">
+                                {{ $forum->user->name }}
+                                @if ($forum->user_id === auth()->user()->id || (auth()->check() && auth()->user()->is_admin))
+                                    <div class="text-end mt-2">
+                                        <div class="bg-primary p-2 rounded d-inline-block">
+                                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal2">
+                                                Edit Forum Title And Content
+                                            </button>
                                         </div>
-                                    @endif
-                                </h3>
+                                    </div>
+                                @endif
+                            </h3>
                             <hr style="border: none;
                                 border-top: 3px solid #000;">
-
                             <div>
                                 <h3 class="panel-title fw-semibold ">{{ $forum->judul }}</h3>
                                 <p class="panel-subtitle ">{{ $forum->created_at }}</p>
-
                                 {{ $forum->konten }}
                                 <hr style="border: none;
                                 border-top: 3px solid #000;">
-
                             </div>
-
                         </div>
-
-
                         <div class="panel-body">
-
                             <div class="btn-group">
-                                <div class="btn btn-primary" id="btn-komentar-utama"> <i class="fas fa-comment"></i>
-                                    Komentar</div>  
+                                <div class="btn btn-primary" id="btn-komentar-utama"> <i
+                                        class="fas fa-comment"></i>&nbsp;Komentar</div>
                             </div>
-
                             <form action="" id="komentar-utama" rows="4"
                                 style="margin-top: 10px; display: none" method="POST">
                                 @csrf
@@ -199,225 +190,237 @@
                                 <input type="hidden" name="parent" value="0">
                                 <textarea name="konten" class="form-control"></textarea><br>
                                 <input type="submit" class="btn btn-primary" value="kirim">
-
                             </form>
                             <br><br>
                             {{-- Komentar Sectiom --}}
                             <h3>Komentar</h3>
-
                             <ul class="list-unstyled activity-list">
                                 @foreach ($forum->komentar()->where('parent', 0)->orderBy('created_at', 'desc')->get() as $komentar)
                                     <hr style="border: none;  border-top: 3px solid #000;">
-
-
-
                                     <li>
                                         <img src="{{ url('storage/' . $komentar->user->profile_photo_path) }}"
                                             alt="Avatar" class="img-circle pull-left avatar">
-
                                         <p>
                                             <a href="#"
                                                 class="text-decoration-none text-dark fw-bold">{{ $komentar->user->name }}</a>
                                             <br>
-
                                             {{ $komentar->konten }}
                                             <span class="timestamp">{{ $komentar->created_at->diffForHumans() }}</span>
                                         </p>
                                         <br>
                                         <div style="display: flex ">
-                                            @if ($komentar->user_id === auth()->user()->id)
+
+                            @if ($komentar->user_id === auth()->user()->id || (auth()->user() && auth()->user()->is_admin))
+                                            
                                                 <form action="{{ route('komentar.destroy', $komentar->id) }}"
                                                     method="POST">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="px-3 btn btn-danger">Delete</button>
+                                                    <button type="submit"
+                                                        class="p-1 btn btn-outline-danger">Delete</button>
                                                 </form>
                                             @endif
+
                                             <br>
 
-                                            @if ($komentar->user_id === auth()->user()->id)
-                                                <button type="button" class="btn btn-warning mx-3 mb-3"
-                                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    Edit Komentar
+                                            @if ($komentar->user_id === auth()->user()->id || (auth()->check() && auth()->user()->is_admin))
+                                                <button type="button" class="btn btn-outline-warning mx-3 mb-3"
+                                                    data-bs-toggle="modal"data-bs-target="#exampleModal">
+                                                    Edit Komentars
                                                 </button>
                                                 <br>
-
-
                                                 <div class="modal fade" id="exampleModal" tabindex="-1"
-                                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal
-                                                                title
-                                                            </h1>
-                                                            <button type="button" class="btn-close"
-                                                                data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            @if ($komentar->user_id === auth()->user()->id)
-                                                                <form
-                                                                    action="{{ route('komentar.update', $komentar->id) }}"
-                                                                    method="POST">
-                                                                    @csrf
-                                                                    @method('PUT')
-                                                                    <textarea name="konten" class="form-control">{{ $komentar->konten }}</textarea>
-                                                                    <br>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary"
-                                                                data-bs-dismiss="modal">Close</button>
-                                                            <button type="submit"
-                                                                class="px-3 btn btn-primary">Update</button>
-                                                        </div>
-                                                        </form>
-                                                    @endif
-                                            </div>
-                                        </div>
-                                    </div>
+                                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                                                    Modal title</h1>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                @if ($komentar->user_id === auth()->user()->id || auth()->user()->is_admin)
+                                                                    <form action="{{ route('komentar.update', $komentar->id) }}" method="POST">
+                                                                        @csrf
+                                                                        @method('PUT')
+                                                                        <textarea name="konten" class="form-control">{{ $komentar->konten }}</textarea>
+                                                                        <br>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-bs-dismiss="modal">Close</button>
+                                                                <button type="submit"
+                                                                    class="px-3 btn btn-primary">Update</button>
+                                                            </div>
+                                                            </form>
                                             @endif
 
-
                                         </div>
-                                        <h5>Balas Komentar : </h5>
-                                        <form action="" method="POST" style="padding-left: 3.5em">
+                        </div>
+                    </div>
+                    @endif
+
+
+                </div>
+                <h5>Balas Komentar : </h5>
+                <form action="" method="POST" style="padding-left: 3.5em">
+                    @csrf
+                    <input type="hidden" name="forum_id" value="{{ $forum->id }}">
+                    <input type="hidden" name="parent" value="{{ $komentar->id }}">
+                    <input type="text" name="konten" class="form-control"><br>
+                    <input type="submit" class="btn btn-primary btn-xs" value="Kirim">
+                </form>
+
+                <hr style="border: none; border-top: 3px solid #000;">
+                <button class="btn btn-success show-reply">Tampilkan Balasan</button>
+
+                <div class="reply-container rounded mt-3" style="display: none; background-color: #336e96">
+                    @foreach ($komentar->childs()->orderBy('created_at', 'desc')->get() as $child)
+                        <hr style="border: none;  border-top: 3px solid #000;">
+                        <p class="p-4">
+                            <img src="{{ url('storage/' . $child->user->profile_photo_path) }}" alt="Avatar"
+                                class="img-circle pull-left avatar" style="margin-right: 10px;">
+                            <a href="#"
+                                class="text-decoration-none text-white">{{ $child->user->name }}</a><br>
+                            <span class="timestamp text-white">{{ $child->created_at->diffForHumans() }}</span>
+                            <span class="text-white">
+                                {{ $child->konten }}
+                            </span>
+
+                        <div style="display: flex" class="p-3">
+                            @if ($child->user_id === auth()->user()->id || (auth()->user() && auth()->user()->is_admin))
+                                <form action="{{ route('komentar.destroy', $child->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit"
+                                        class="p-1 btn btn-outline-danger text-white">Delete</button>
+                                </form>
+                            @endif
+                            @if ($child->user_id === auth()->user()->id || (auth()->user() && auth()->user()->is_admin))
+                                <button type="button" class="btn btn-outline-warning text-white ml-3"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                    Edit Komentarz
+                                </button>
+                                <br>
+                            @endif
+                        </div>
+
+                        </p>
+
+
+
+                        {{-- Modal 1 --}}
+                        <div class="modal fade" id="exampleModal1" tabindex="-1"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modals title</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="{{ route('komentar.update', $child->id) }}" method="POST">
                                             @csrf
-                                            <input type="hidden" name="forum_id" value="{{ $forum->id }}">
-                                            <input type="hidden" name="parent" value="{{ $komentar->id }}">
-                                            <input type="text" name="konten" class="form-control"><br>
-                                            <input type="submit" class="btn btn-primary btn-xs" value="Kirim">
-                                        </form>
-
-                                        <hr style="border: none; border-top: 3px solid #000;">
-                                        <button class="btn btn-success show-reply">Tampilkan Balasan</button>
-                                        
-                                        <div class="reply-container rounded mt-3" style="display: none; background-color: #777777">
-                                            @foreach ($komentar->childs()->orderBy('created_at', 'desc')->get() as $child)
-                                                <hr style="border: none;  border-top: 3px solid #000;">
-                                                <p class="p-4">
-                                                    <img src="{{ url('storage/' . $child->user->profile_photo_path) }}" alt="Avatar" class="img-circle pull-left avatar" style="margin-right: 10px;">
-                                                    <a href="#" class="text-decoration-none text-white">{{ $child->user->name }}</a><br>
-                                                    <span class="timestamp text-white">{{ $child->created_at->diffForHumans() }}</span>
-                                                    <span class="text-white">
-                                                        {{ $child->konten }}
-                                                    </span>
-                                                    <div style="display: flex" class="p-3">
-                                                        @if ($child->user_id === auth()->user()->id)
-                                                            <form action="{{ route('komentar.destroy', $child->id) }}" method="POST">
-                                                                @csrf
-                                                                @method('DELETE')
-                                                                <button type="submit" class="px-3 btn btn-danger">Delete</button>
-                                                            </form>
-                                                        @endif
-                                                        @if ($child->user_id === auth()->user()->id)
-                                                            <button type="button" class="btn btn-warning ml-3" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                                                                Edit Komentar
-                                                            </button>
-                                                            <br>
-                                                        @endif
-                                                    </div>
-                                                </p>
-
-
-
-                {{-- Modal 1 --}}
-                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal
-                                    title
-                                </h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
+                                            @method('PUT')
+                                            <textarea name="konten" class="form-control">{{ $child->konten }}</textarea>
+                                            <br>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Closse</button>
+                                        <button type="submit" class="px-3 btn btn-primary">Update</button>
+                                    </div>
+                                    </form>
+                                </div>
                             </div>
+                        </div>
+                    @endforeach
+                </div>
+                </li>
+                @endforeach
+                </ul>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+
+        <div class="modal" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal titles</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                       
+                       
+                       
+                        <form action="{{ route('forum.update.utama', $forum->id) }}" method="POST">
+                            @csrf
+                            @method('PUT')
                             <div class="modal-body">
-                                @if ($child->user_id === auth()->user()->id)
-                                    <form action="{{ route('komentar.update', $child->id) }}" method="POST">
-                                        @csrf
-                                        @method('PUT')
-                                        <textarea name="konten" class="form-control">{{ $child->konten }}</textarea>
-                                        <br>
+                                <div class="mb-3">
+                                    <label for="title" class="form-label">Forum Titles</label>
+                                    <input type="text" class="form-control" id="title" name="judul"
+                                        value="{{ $forum->judul }}">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="content" class="form-label">Forum Content</label>
+                                    <textarea class="form-control" id="content" name="konten" rows="4">{{ $forum->konten }}</textarea>
+                                </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary"
                                     data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="px-3 btn btn-primary">Update</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
                             </div>
-                            </form>
-                            @endif
-                        </div>
-                    </div>
-                </div>
+                        </form>
 
 
 
-
-                                            @endforeach
-                                        </div>
-                                        
-                                        
-                                        <br>
-
-                                        <br>
-
-
-
-
-                                        <br>
-
-                                      
-                <hr>
-
-
-
-
-                </li>
-                @endforeach
-
-                </ul>
-
-            </div>
-
-        </div>
-        </div>
-        </div>
-        </div>
-        </div>
-
-
-            <!-- Modal -->
-            <div class="modal" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="{{ route('forum.update.utama', $forum->id) }}" method="POST">
-                                @csrf
-                                @method('PUT')
-                                <div class="modal-body">
-                                    <div class="mb-3">
-                                        <label for="title" class="form-label">Forum Title</label>
-                                        <input type="text" class="form-control" id="title" name="judul" value="{{ $forum->judul }}">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="content" class="form-label">Forum Content</label>
-                                        <textarea class="form-control" id="content" name="konten" rows="4">{{ $forum->konten }}</textarea>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary">Save changes</button>
-                                </div>
-                            </form>
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        @include('partials._footer')
     </body>
 
 </x-app-layout>

@@ -24,6 +24,53 @@
         </div>
     @endif
 
+    <style>
+        /* app.css */
+
+.container {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.info-wrap {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-wrap h4 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.info-wrap p {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+    </style>
 
     <!-- ======= Contact Section ======= -->
     <div class="map-section">
@@ -32,26 +79,26 @@
             
     </div>
     <section id="contact" class="contact">
-        <div class="container">
+        <div class="container bg-white p-5 rounded-full">
 
             <div class="row justify-content-center" data-aos="fade-up">
-
+        
                 <div class="col-lg-10">
-
-                    <div class="info-wrap">
+        
+                    <div class="info-wrap rounded">
                         <div class="row">
                             <div class="col-lg-4 info">
                                 <i class="icofont-google-map"></i>
                                 <h4>Location:</h4>
                                 <p>{{ $contacts->address }}</p>
                             </div>
-
+        
                             <div class="col-lg-4 info mt-4 mt-lg-0">
                                 <i class="icofont-envelope"></i>
                                 <h4>Email:</h4>
                                 <p>{{ $contacts->email }}</p>
                             </div>
-
+        
                             <div class="col-lg-4 info mt-4 mt-lg-0">
                                 <i class="icofont-phone"></i>
                                 <h4>Call:</h4>
@@ -59,17 +106,17 @@
                             </div>
                         </div>
                     </div>
-
+        
                 </div>
             </div>
-
+        
             <div class="row mt-5 justify-content-center" data-aos="fade-up">
                 <div class="col-lg-10">
                     <form action="{{ route('contact.form') }}" method="post">
                         @csrf
                         <div class="form-row">
                             <div class="col-md-6 form-group">
-                                <input type="text" name="name" class="form-control"  placeholder="Your Name" />
+                                <input type="text" name="name" class="form-control" placeholder="Your Name" />
                             </div>
                             <div class="col-md-6 form-group">
                                 <input type="email" class="form-control" name="email" placeholder="Your Email" />
@@ -86,6 +133,9 @@
                 </div>
             </div>
         </div>
+        
     </section>
+    
+    @include('partials._footer')
     <!-- End Contact Section -->
     </x-app-layout>

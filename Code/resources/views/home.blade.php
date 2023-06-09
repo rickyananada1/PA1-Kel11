@@ -5,7 +5,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <div id="about" class="about-area area-padding"   >
+    <div id="about" class="about-area area-padding"   data-aos="fade-right"data-aos-duration="800" data-aos-delay="200">
 
 
         <div class="container" >
@@ -67,7 +67,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="section-headline services-head text-center">
+                    <div class="section-headline services-head text-center" data-aos="fade-right"data-aos-duration="200" data-aos-delay="100">
                         <h2>Our Features</h2>
                     </div>
                 </div>
@@ -76,7 +76,7 @@
 
             <div class="row text-center">
                 <!-- Start Left services -->
-                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-right"data-aos-duration="800" data-aos-delay="200">
+                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-right"data-aos-duration="500" data-aos-delay="200">
                     <div class="about-move">
                         <div class="services-details">
                             <div class="single-services">
@@ -95,7 +95,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-right"data-aos-duration="900" data-aos-delay="300">
+                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-right"data-aos-duration="600" data-aos-delay="300">
                     <div class="about-move">
                         <div class="services-details">
                             <div class="single-services">
@@ -113,7 +113,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-right"data-aos-duration="1000" data-aos-delay="400">
+                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-right"data-aos-duration="700" data-aos-delay="400">
                     <!-- end col-md-4 -->
                     <div class=" about-move">
                         <div class="services-details">
@@ -132,7 +132,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-left"data-aos-duration="1300" data-aos-delay="700">
+                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-left"data-aos-duration="1000" data-aos-delay="700">
                     <!-- end col-md-4 -->
                     <div class=" about-move">
                         <div class="services-details">
@@ -152,7 +152,7 @@
                 <!-- End Left services -->
 
 
-                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-left"data-aos-duration="1200" data-aos-delay="600">
+                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-left"data-aos-duration="900" data-aos-delay="600">
                     <!-- end col-md-4 -->
 
 
@@ -173,7 +173,7 @@
                     </div>
                 </div>
                 <!-- End Left services -->
-                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-left"data-aos-duration="1100" data-aos-delay="500">
+                <div class="col-md-4 col-sm-4 col-xs-12" data-aos="fade-left"data-aos-duration="800" data-aos-delay="500">
                     <!-- end col-md-4 -->
                     <div class=" about-move">
                         <div class="services-details">
@@ -202,13 +202,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
-                    <div class="section-headline text-center">
+                    <div class="section-headline text-center" data-aos="fade-right"data-aos-duration="800" data-aos-delay="200">
                         <h2>Our Destintation</h2>
                     </div>
                 </div>
             </div>
 
-            <div class="row" >
+            <div class="row" data-aos="fade-left"data-aos-duration="500" data-aos-delay="200">
                 @foreach ($teams as $team)
                     <div class="col-md-3 col-sm-3 col-xs-12">
                         <div class="single-team-member">
@@ -236,7 +236,7 @@
 
     {{-- PANTAI LUMBAN BINANGA (Description) --}}
     <!-- ======= Rviews Section ======= -->
-    <div style="background-color: #000000" >
+    <div style="background-color: #000000" data-aos="fade-in"data-aos-duration="500" data-aos-delay="200">
         <div class="row g-0" >
             <div class="col-lg-6"> <br><br> <br>
                 <img src="frontend/assets/pantai.jpeg" width="950px" style="height: 600px; padding-bottom: 70px">

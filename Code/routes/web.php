@@ -33,9 +33,8 @@ use App\Http\Controllers\StrukturVisiMisiController;
 Route::get('/', function () {
     $abouts = DB::table('home_abouts')->first(); 
     $teams = DB::table('teams')->get();
-    return view('home',compact('abouts','teams'));
-});
-
+    return view('home', compact('abouts', 'teams'));
+})->middleware('guest');
 
 
 
@@ -43,76 +42,74 @@ Route::get('/', function () {
 // FRONTEND BEFORE LOGIN
 
 // Slider
-Route::get('home/slider',[SliderController::class,'HomeSlider'])->name('home.slider');
-Route::get('add/slider',[SliderController::class,'AddSlider'])->name('add.slider');
-Route::post('store/slider',[SliderController::class,'StoreSlider'])->name('store.slider');
-Route::get('slider/edit/{id}',[SliderController::class,'Edit']);
-Route::post('slider/update/{id}',[SliderController::class,'Update']);
-Route::get('slider/delete/{id}',[SliderController::class,'Delete']);
+Route::get('home/slider',[SliderController::class,'HomeSlider'])->name('home.slider')->middleware('admin');
+Route::get('add/slider',[SliderController::class,'AddSlider'])->name('add.slider')->middleware('admin');;
+Route::post('store/slider',[SliderController::class,'StoreSlider'])->name('store.slider')->middleware('admin');;
+Route::get('slider/edit/{id}',[SliderController::class,'Edit'])->middleware('admin');;
+Route::post('slider/update/{id}',[SliderController::class,'Update'])->middleware('admin');;
+Route::get('slider/delete/{id}',[SliderController::class,'Delete'])->middleware('admin');;
 
 // About
-Route::get('home/about',[AboutController::class,'HomeAbout'])->name('home.about');
-Route::get('add/about',[AboutController::class,'AddAbout'])->name('add.about');
-Route::post('store/about',[AboutController::class,'StoreAbout'])->name('store.about');
-Route::get('about/edit/{id}',[AboutController::class,'EditAbout']);
-Route::post('about/update/{id}',[AboutController::class,'UpdateAbout']);
-Route::get('about/delete/{id}',[AboutController::class,'DeleteAbout']);
+Route::get('home/about',[AboutController::class,'HomeAbout'])->name('home.about')->middleware('admin');;
+Route::get('add/about',[AboutController::class,'AddAbout'])->name('add.about')->middleware('admin');;
+Route::post('store/about',[AboutController::class,'StoreAbout'])->name('store.about')->middleware('admin');;
+Route::get('about/edit/{id}',[AboutController::class,'EditAbout'])->middleware('admin');;
+Route::post('about/update/{id}',[AboutController::class,'UpdateAbout'])->middleware('admin');;
+Route::get('about/delete/{id}',[AboutController::class,'DeleteAbout'])->middleware('admin');;
 
 
 // Destination
-Route::get('home/team',[TeamController::class,'HomeTeam'])->name('home.team');
-Route::get('add/team',[TeamController::class,'AddTeam'])->name('add.team');
-Route::post('store/team',[TeamController::class,'StoreTeam'])->name('store.team');
-Route::get('team/edit/{id}',[TeamController::class,'Edit']);
-Route::post('team/update/{id}',[TeamController::class,'Update']);
-Route::get('team/delete/{id}',[TeamController::class,'Delete']);
+Route::get('home/team',[TeamController::class,'HomeTeam'])->name('home.team')->middleware('admin');;
+Route::get('add/team',[TeamController::class,'AddTeam'])->name('add.team')->middleware('admin');;
+Route::post('store/team',[TeamController::class,'StoreTeam'])->name('store.team')->middleware('admin');;
+Route::get('team/edit/{id}',[TeamController::class,'Edit'])->middleware('admin');;
+Route::post('team/update/{id}',[TeamController::class,'Update'])->middleware('admin');;
+Route::get('team/delete/{id}',[TeamController::class,'Delete'])->middleware('admin');;
 
 
 
 // News
-Route::get('home/news',[NewsController::class,'HomeNews'])->name('home.news');
-Route::get('add/ news',[NewsController::class,'AddNews'])->name('add.news');
-Route::post('store/news',[NewsController::class,'StoreNews'])->name('store.news');
-Route::get('news/edit/{id}',[NewsController::class,'Edit']);
-Route::post('news/update/{id}',[NewsController::class,'Update']);
-Route::get('news/delete/{id}',[NewsController::class,'Delete']);
-
-// Tampilan User Setelah login
+Route::get('home/news',[NewsController::class,'HomeNews'])->name('home.news')->middleware('admin');;
+Route::get('add/ news',[NewsController::class,'AddNews'])->name('add.news')->middleware('admin');;
+Route::post('store/news',[NewsController::class,'StoreNews'])->name('store.news')->middleware('admin');;
+Route::get('news/edit/{id}',[NewsController::class,'Edit'])->middleware('admin');;
+Route::post('news/update/{id}',[NewsController::class,'Update'])->middleware('admin');;
+Route::get('news/delete/{id}',[NewsController::class,'Delete'])->middleware('admin');;
 
 // Profil Desa (Struktur Desa)
-Route::get('home/struktur',[StrukturDesaController::class,'HomeStruktur'])->name('home.struktur');
-Route::get('add/struktur',[StrukturDesaController::class,'AddStruktur'])->name('add.struktur');
-Route::post('store/struktur',[StrukturDesaController::class,'StoreStruktur'])->name('store.struktur');
-Route::get('struktur/edit/{id}',[StrukturDesaController::class,'Edit']);
-Route::post('struktur/update/{id}',[StrukturDesaController::class,'Update']);
-Route::get('struktur/delete/{id}',[StrukturDesaController::class,'Delete']);
+Route::get('home/struktur',[StrukturDesaController::class,'HomeStruktur'])->name('home.struktur')->middleware('admin');;
+Route::get('add/struktur',[StrukturDesaController::class,'AddStruktur'])->name('add.struktur')->middleware('admin');;
+Route::post('store/struktur',[StrukturDesaController::class,'StoreStruktur'])->name('store.struktur')->middleware('admin');;
+Route::get('struktur/edit/{id}',[StrukturDesaController::class,'Edit'])->middleware('admin');;
+Route::post('struktur/update/{id}',[StrukturDesaController::class,'Update'])->middleware('admin');;
+Route::get('struktur/delete/{id}',[StrukturDesaController::class,'Delete'])->middleware('admin');;
 
 // Profil Desa (Visi & Misi)
-Route::get('home/visimisi',[VisiMisiController::class,'HomeVisiMisi'])->name('home.visimisi');
-Route::get('add/visimisi',[VisiMisiController::class,'AddVisiMisi'])->name('add.visimisi');
-Route::post('store/visimisi',[VisiMisiController::class,'StoreVisiMisi'])->name('store.visimisi');
-Route::get('visimisi/edit/{id}',[VisiMisiController::class,'Edit']);
-Route::post('visimisi/update/{id}',[VisiMisiController::class,'Update']);
-Route::get('visimisi/delete/{id}',[VisiMisiController::class,'Delete']);
+Route::get('home/visimisi',[VisiMisiController::class,'HomeVisiMisi'])->name('home.visimisi')->middleware('admin');;
+Route::get('add/visimisi',[VisiMisiController::class,'AddVisiMisi'])->name('add.visimisi')->middleware('admin');
+Route::post('store/visimisi',[VisiMisiController::class,'StoreVisiMisi'])->name('store.visimisi')->middleware('admin');
+Route::get('visimisi/edit/{id}',[VisiMisiController::class,'Edit'])->middleware('admin');
+Route::post('visimisi/update/{id}',[VisiMisiController::class,'Update'])->middleware('admin');
+Route::get('visimisi/delete/{id}',[VisiMisiController::class,'Delete'])->middleware('admin');
 
 // Profil Desa (Galeri)
-Route::get('home/galeri',[GaleriController::class,'HomeGaleri'])->name('home.galeri');
-Route::get('add/galeri',[GaleriController::class,'AddGaleri'])->name('add.galeri');
-Route::post('store/galeri',[GaleriController::class,'StoreGaleri'])->name('store.galeri');
-Route::get('galeri/edit/{id}',[GaleriController::class,'Edit']);
-Route::post('galeri/update/{id}',[GaleriController::class,'Update']);
-Route::get('galeri/delete/{id}',[GaleriController::class,'Delete']);
+Route::get('home/galeri',[GaleriController::class,'HomeGaleri'])->name('home.galeri')->middleware('admin');
+Route::get('add/galeri',[GaleriController::class,'AddGaleri'])->name('add.galeri')->middleware('admin');
+Route::post('store/galeri',[GaleriController::class,'StoreGaleri'])->name('store.galeri')->middleware('admin');
+Route::get('galeri/edit/{id}',[GaleriController::class,'Edit'])->middleware('admin');
+Route::post('galeri/update/{id}',[GaleriController::class,'Update'])->middleware('admin');
+Route::get('galeri/delete/{id}',[GaleriController::class,'Delete'])->middleware('admin');
 
 // Destinasi Wisata
-Route::get('home/destinasi',[DestinasiController::class,'HomeDestinasi'])->name('home.destinasi');
-Route::get('add/destinasi',[DestinasiController::class,'AddDestinasi'])->name('add.destinasi');
-Route::post('store/destinasi',[DestinasiController::class,'StoreDestinasi'])->name('store.destinasi');
-Route::get('destinasi/edit/{id}',[DestinasiController::class,'Edit']);
-Route::post('destinasi/update/{id}',[DestinasiController::class,'Update']);
-Route::get('destinasi/delete/{id}',[DestinasiController::class,'Delete']);
+Route::get('home/destinasi',[DestinasiController::class,'HomeDestinasi'])->name('home.destinasi')->middleware('admin');
+Route::get('add/destinasi',[DestinasiController::class,'AddDestinasi'])->name('add.destinasi')->middleware('admin');
+Route::post('store/destinasi',[DestinasiController::class,'StoreDestinasi'])->name('store.destinasi')->middleware('admin');
+Route::get('destinasi/edit/{id}',[DestinasiController::class,'Edit'])->middleware('admin');
+Route::post('destinasi/update/{id}',[DestinasiController::class,'Update'])->middleware('admin');
+Route::get('destinasi/delete/{id}',[DestinasiController::class,'Delete'])->middleware('admin');
 
 // Sejarah Controller
-Route::get('home/sejarah',[SejarahController::class,'HomeSejarah'])->name('home.sejarah');
+Route::get('home/sejarah',[SejarahController::class,'HomeSejarah'])->name('home.sejarah')->middleware('admin');
 Route::get('add/sejarah',[SejarahController::class,'AddSejarah'])->name('add.sejarah');
 Route::post('store/sejarah',[SejarahController::class,'StoreSejarah'])->name('store.sejarah');
 Route::get('sejarah/edit/{id}',[SejarahController::class,'Edit']);
@@ -123,6 +120,7 @@ Route::get('sejarah/delete/{id}',[SejarahController::class,'Delete']);
 Route::get('home/lokasi',[PengelolaanSampahController::class,'HomeLokasi'])->name('home.pengelolaansampah');
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
+   
     Route::get('/dashboard', function () {
         // Cek apakah user adalah admin atau bukan
         if (Auth::user()->is_admin) {
@@ -137,7 +135,6 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
       
     
     })->name('home');
-
 
     Route::get('/destinasi',function(){
         $destinasis = DB::table('destinasis')->get();
@@ -163,13 +160,14 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
         $sejarahs = DB::table('sejarahs')->get();
         return view('users.sejarah', compact('sejarahs'));
     })->name('sejarahs');
+
+    
  
 
     Route::get('/galeri/desa', function() {
         $galeris = DB::table('galeris')->get();
         return view('users.galeri', compact('galeris'));
     })->name('galeris');
- 
 
     // Route Forums
     Route::get('/forum',[ForumController::class,'index'])->name('forums');
@@ -178,8 +176,6 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     Route::post('/forum/{forum}/view', [ForumController::class, 'postkomentar']);
 
     Route::delete('/komentar/{id}', [ForumController::class,'destroy'])->name('komentar.destroy');
-
-
     Route::get('/komentar/{id}/edit', [ForumController::class,'edit'])->name('komentar.edit');
     Route::put('/komentar/{id}', [ForumController::class,'update'])->name('komentar.update');
 
@@ -206,14 +202,12 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
 
 Route::view('/destinasi/pantai', 'users.destinasi.pantai_destinasi')->name('pantai_destinasi');
 Route::view('/pengelolaan/sampah', 'users.pengelolaan_sampah')->name('pantai_destinasi');
-// Route::view('/struktur/desa', 'users.struktur_desa')->name('struktur_desa');
 
 // Admin contact
-Route::get('/admin/contact',[ContactController::class,'AdminContact'])->name('admin.contact');
-Route::get('/admin/add/contact',[ContactController::class,'AdminAddContact'])->name('add.contact');
-Route::post('/admin/store/contact',[ContactController::class,'AdminStoreContact'])->name('store.contact');
-Route::get('/admin/message',[ContactController::class,'AdminMessage'])->name('admin.message');
-
+Route::get('/admin/contact',[ContactController::class,'AdminContact'])->name('admin.contact')->middleware('admin');
+Route::get('/admin/add/contact',[ContactController::class,'AdminAddContact'])->name('add.contact')->middleware('admin');
+Route::post('/admin/store/contact',[ContactController::class,'AdminStoreContact'])->name('store.contact')->middleware('admin');
+Route::get('/admin/message',[ContactController::class,'AdminMessage'])->name('admin.message')->middleware('admin');
 Route::group(['middleware' => ['auth']], function() {
     Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
 

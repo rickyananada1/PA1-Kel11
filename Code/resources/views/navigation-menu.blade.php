@@ -1,82 +1,75 @@
-<nav x-data="{ open: false }" class="border-b border-gray-100 p-2 " style="background-color:white ; margin-top: -10px; margin-bottom: -1px;">
+
+<nav x-data="{ open: false }" class="border-b border-gray-100 p-2" style="background-color:#336e96 ; margin-top: -10px; margin-bottom: -1px; color: " >
+
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16 " style="margin-bottom: 20px; margin-top: 10px">
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center mt-2" >
-                <img src="{{asset('logo/lumbanbinanga.jpeg')}}" width="120">
+                <img src="{{asset('assets5/beach.png')}}" width="70" class="pt-2">
             </a>
                 </div>
 
                 <!-- Navbar -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex mt-2">
-                    <x-jet-nav-link href="{{ route('home') }}" class="text-decoration-none">
+                    <x-jet-nav-link href="{{ route('home') }}" class="text-decoration-none text-white" style="font-size: 16px" >
                       Home
                     </x-jet-nav-link>
 
                     {{-- Profil Desa Dropdown Navbar --}}
-                    <x-jet-dropdown >
+                    <x-jet-dropdown>
                         <x-slot name="trigger">
-                            <div class="flex items-center  " style="margin-top: 19px">
-                              <a href="#" class="text-decoration-none text-secondary">Profil Desa</a>
-                              <svg class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 13l-5-5h10l-5 5z" />
-                              </svg>
+                            <div class="flex items-center" style="margin-top: 19px">
+                                <a href="#" class="text-decoration-none text-white" style="font-size: 16px">Profil Desa</a>
+                                <svg class="ml-1 h-5 w-5 text-white" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 13l-5-5h10l-5 5z" />
+                                </svg>
                             </div>
-                          </x-slot>
-                
+                        </x-slot>
+                    
                         <x-slot name="content">
-                            <a href="/sejarah/desa" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
-                                Sejarah Desa
-                            </a>
-                            <a href="/visimisi/desa" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
-                                Visi & Misi
-                            </a>
-                            <a href="/struktur/desa" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary" >
-                                Struktur Desa
-                            </a>
-                            <a href="/galeri/desa" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
-                                Galeri
-                            </a>
+                            <div >
+                                <a href="/sejarah/desa" class="block px-4 py-2 text-sm hover:bg-gray-100 text-decoration-none text-dark" style="font-weight: bold">
+                                    Sejarah Desa
+                                </a>
+                                <a href="/visimisi/desa" class="block px-4 py-2 text-sm hover:bg-gray-100 text-decoration-none text-dark" style="font-weight: bold">
+                                    Visi &amp; Misi
+                                </a>
+                                <a href="/struktur/desa" class="block px-4 py-2 text-sm hover:bg-gray-100 text-decoration-none text-dark" style="font-weight: bold">
+                                    Struktur Desa
+                                </a>
+                                <a href="/galeri/desa" class="block px-4 py-2 text-sm hover:bg-gray-100 text-decoration-none text-dark" style="font-weight: bold">
+                                    Galeri
+                                </a>
+                            </div>
                         </x-slot>
                     </x-jet-dropdown>
-
-                    {{-- Pengelolaan Sampah Dropdown Navbar --}}
-                    {{-- <x-jet-dropdown >
-                        <x-slot name="trigger">
-                            <div class="flex items-center " style="margin-top: 21px" >
-                              <a href="#" class="text-decoration-none text-secondary">Pengelolaan Sampah</a>
-                              <svg class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                <path fill-rule="evenodd" d="M10 13l-5-5h10l-5 5z" />
-                              </svg>
-                            </div>
-                          </x-slot>
-                    </x-jet-dropdown> --}}
+                    
 
 
 
 
                 
 
-                    <x-jet-nav-link href="/pengelolaan/sampah" class="text-decoration-none text-secondary">
+                    <x-jet-nav-link href="/pengelolaan/sampah" class="text-decoration-none text-white" style="font-size: 16px"> 
                       Pengelolaan Sampah
                     </x-jet-nav-link>
                     
 
-                    <x-jet-nav-link href="{{ route('destinasi') }} " class="text-decoration-none text-secondary">
-                      Destinasi Wisata
+                    <x-jet-nav-link href="{{ route('destinasi') }} " class="text-decoration-none text-white" style="font-size: 16px">
+                      Pariwisata
                     </x-jet-nav-link>
                     
 
                     {{-- Diskusi Navbar --}}
-                    <x-jet-nav-link href="{{route('forums')}}" class="text-decoration-none text-secondary">
+                    <x-jet-nav-link href="{{route('forums')}}" class="text-decoration-none text-white" style="font-size: 16px">
                       Forum
                     </x-jet-nav-link>
                     
 
                     {{-- Kontak Kami Navbar --}}
-                    <x-jet-nav-link href="{{ route('contact') }}" class="text-decoration-none text-secondary">
+                    <x-jet-nav-link href="{{ route('contact') }}" class="text-decoration-none text-white" style="font-size: 16px">
                       Kontak Kami
                     </x-jet-nav-link>
 
@@ -91,7 +84,7 @@
                         <x-jet-dropdown align="right" width="60">
                             <x-slot name="trigger">
                                 <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition">
+                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:bg-gray-50 hover:focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition">
                                         {{ Auth::user()->currentTeam->name }}
 
                                         <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -136,16 +129,16 @@
                 @endif
 
                 <!-- Settings Dropdown -->
-                <div class="ml-3 relative">
-                    <x-jet-dropdown align="right" width="48">
+                <div class="ml-3 relative ">
+                    <x-jet-dropdown align="right" width="48" > 
                         <x-slot name="trigger">
                             @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                                <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
-                                    <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
+                                <button class="flex text-sm border-2 mt-3 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
+                                    <img class="h-12 w-12 rounded-full object-cover " src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                                 </button>
                             @else
                                 <span class="inline-flex rounded-md">
-                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
+                                    <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:focus:outline-none transition">
                                         {{ Auth::user()->name }}
 
                                         <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -156,13 +149,13 @@
                             @endif
                         </x-slot>
 
-                        <x-slot name="content">
+                        <x-slot name="content" >
                             <!-- Account Management -->
-                            <div class="block px-4 py-2 text-xs text-gray-400 text-decoration-none text-secondary">
+                            <div class="block px-4 py-2 text-xs  text-decoration-none text-dark hover" id=""  >
                                 {{ __('Manage Account') }}
                             </div>
 
-                            <x-jet-dropdown-link href="{{ route('profile.show') }} " class="text-decoration-none text-secondary">
+                            <x-jet-dropdown-link href="{{ route('profile.show') }} " class="text-decoration-none text-dark hover" id="">
                                 {{ __('Profile') }}
                             </x-jet-dropdown-link>
 
@@ -179,7 +172,7 @@
                                 @csrf
 
                                 <x-jet-dropdown-link href="{{ route('logout') }} "
-                                         @click.prevent="$root.submit();" class="text-decoration-none text-secondary">
+                                         @click.prevent="$root.submit();" class="text-decoration-none text-dark hover" id="">
                                     {{ __('Log Out') }}
                                 </x-jet-dropdown-link>
                             </form>
@@ -203,32 +196,32 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1 ">
-            <x-jet-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')" class="text-decoration-none text-secondary">
+            <x-jet-responsive-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')" class="text-white fw-semibold  text-decoration-none" style="background-color: #336e96">
             Home
             </x-jet-responsive-nav-link>
             
 
             <x-jet-dropdown >
                 <x-slot name="trigger">
-                    <div class="flex items-center" style="margin-top: 21px">
-                      <a href="#" class="px-3 text-decoration-none text-secondary">Profil Desa</a>
+                    <div class="flex items-center text-white pt-3 "  >
+                      <a href="#" class="px-3 text-decoration-none text-white">Profil Desa</a>
                       <svg class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 13l-5-5h10l-5 5z" />
+                        <path fill-rule="evenodd" d="M10 13l-5-5h10l-5 5z" />  
                       </svg>
                     </div>
                   </x-slot>
         
                 <x-slot name="content">
-                    <a href="/sejarah/desa" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
+                    <a href="/sejarah/desa" class="block px-4 py-2 text-sm hover:bg-gray-100 text-decoration-none text-dark">
                         Sejarah Desa
                     </a>
-                    <a href="/visimisi/desa" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
+                    <a href="/visimisi/desa" class="block px-4 py-2 text-sm hover:bg-gray-100 text-decoration-none text-dark">
                         Visi & Misi
                     </a>
-                    <a href="/struktur/desa" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary" >
+                    <a href="/struktur/desa" class="block px-4 py-2 text-sm hover:bg-gray-100 text-decoration-none text-dark" >
                         Struktur Desa
                     </a>
-                    <a href="/galeri/desa" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
+                    <a href="/galeri/desa" class="block px-4 py-2 text-sm hover:bg-gray-100 text-decoration-none text-dark">
                         Galeri
                     </a>
                 </x-slot>
@@ -236,51 +229,26 @@
 
 
 
-            {{-- Pengelolaan Sampah Dropdown Navbar --}}
-            {{-- <x-jet-dropdown >
-                <x-slot name="trigger">
-                    <div class="flex items-center" style="margin-top: 21px">
-                      <a href="#"  class="px-3 text-decoration-none text-secondary">Pengelolaan Sampah</a>
-                      <svg class="ml-1 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 13l-5-5h10l-5 5z" />
-                      </svg>
-                    </div>
-                  </x-slot>
-        
-                <x-slot name="content">
-                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
-                        Tentang Kami
-                    </a>
-                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
-                        Layanan
-                    </a>
-                    <a href="{{ route('home') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 text-decoration-none text-secondary">
-                        Kontak
-                    </a>
-                </x-slot>
-            </x-jet-dropdown> --}}
 
-                                
-
-            <x-jet-responsive-nav-link href="/pengelolaan/sampah" class="text-decoration-none text-secondary">
+            <x-jet-responsive-nav-link href="/pengelolaan/sampah" class="text-decoration-none text-white fw-semibold text-decoration-none" style="margin-top: 21px;background-color: #336e96 ">
                 Pengelolaan Sampah
 
               </x-jet-responsive-nav-link>
 
-            <x-jet-responsive-nav-link href="{{ route('destinasi') }}" class="text-decoration-none text-secondary">
-                Destinasi Wisata
+            <x-jet-responsive-nav-link href="{{ route('destinasi') }}" class="text-decoration-none text-white fw-semibold text-decoration-none" style="margin-top: 21px;background-color: #336e96 ">
+                Pariwisata
               </x-jet-responsive-nav-link>
               
 
 
               {{-- Diskusi Navbar --}}
-              <x-jet-responsive-nav-link href="{{route('forums')}}" class="text-decoration-none text-secondary">
+              <x-jet-responsive-nav-link href="{{route('forums')}}" class="text-decoration-none text-white fw-semibold text-decoration-none" style="margin-top: 21px;background-color: #336e96 ">
                 Forum
               </x-jet-responsive-nav-link>
               
 
               {{-- Kontak Kami Navbar --}}
-              <x-jet-responsive-nav-link href="{{ route('contact') }}" class="text-decoration-none text-secondary">
+              <x-jet-responsive-nav-link href="{{ route('contact') }}" class="text-decoration-none text-white fw-semibold text-decoration-none" style="margin-top: 21px;background-color: #336e96 ">
                 Kontak Kami
               </x-jet-responsive-nav-link>
 
@@ -295,20 +263,20 @@
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="flex items-center px-4">
                 @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                    <div class="shrink-0 mr-3">
-                        <img class="h-10 w-10 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
+                    <div class="shrink-0 mr-3 mt-3 ">
+                        <img class="h-10 w-10 rounded-full object-cover " src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                     </div>
                 @endif
 
                 <div>
-                    <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                    <div class="font-medium text-base text-white fw-semibold text-decoration-none" style="margin-top: 21px;background-color: #336e96 ">{{ Auth::user()->name }}</div>
+                    <div class="font-medium text-sm text-white  text-decoration-none" style="background-color: #336e96 ">{{ Auth::user()->email }}</div>
                 </div>
             </div>
 
             <div class="mt-3 space-y-1">
                 <!-- Account Management -->
-                <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
+                <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')" class="text-white fw-semibold text-decoration-none" style="margin-top: 21px;background-color: #336e96 ">
                     {{ __('Profile') }}
                 </x-jet-responsive-nav-link>
 
@@ -323,7 +291,7 @@
                     @csrf
 
                     <x-jet-responsive-nav-link href="{{ route('logout') }} "
-                                   @click.prevent="$root.submit();">
+                                   @click.prevent="$root.submit();" class="text-white fw-semibold text-decoration-none" style="margin-top: 21px;background-color: #336e96 ">
                         {{ __('Log Out') }}
                     </x-jet-responsive-nav-link>
                 </form>

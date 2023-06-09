@@ -13,13 +13,19 @@
     flex: 1;
 }   
 </style>
+<link rel="icon" href="assets5/beach.png">
+
+<title>Register</title>
         <x-slot name="logo">
             <x-jet-authentication-card-logo />
         </x-slot>
         
         {{-- style="background-color: rgb(24, 110, 150)" --}}
-        <x-jet-validation-errors class="mb-4" />
-        <div style="background-image: url('assets5/pantai.png')">
+        <div id="validation-errors" style="display: none;">
+            <x-jet-validation-errors />
+        </div>
+        {{-- <div style="background-image: url('assets5/pantai.png')"> --}}
+        <div style="background-image: url('assets5/tes1.jpeg')">
         <section class="vh-100" >
             <div class="container h-100">
               <div class="row d-flex justify-content-center align-items-center h-100">
@@ -176,6 +182,16 @@ document.getElementById("toggleConfirmPassword").addEventListener("click", funct
         confirmPasswordInput.type = "password";
         confirmEyeIcon.classList.remove("mdi-eye-off");
         confirmEyeIcon.classList.add("mdi-eye");
+    }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var validationErrors = document.getElementById('validation-errors');
+    var errorMessage = validationErrors.innerText.trim();
+
+    if (errorMessage !== '') {
+        alert(errorMessage);
+        validationErrors.innerHTML = '';
     }
 });
 

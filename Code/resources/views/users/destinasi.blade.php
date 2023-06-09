@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="{{asset('assets2/fonts/icomoon/style.css')}}">
     <link rel="stylesheet" href="{{asset('assets2/fonts/flaticon/font/flaticon.css')}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
@@ -36,20 +35,27 @@
     
      
     
-      <div class="hero overlay inner-page py-4" style="background-color:#032A3B">
-        <div class="container">
-          <div class="row align-items-center justify-content-center text-center ">
-            <div class="col-lg-6">
-              <h1 class="heading text-white pt-2" data-aos="fade-up">Destinasi Wisata & News</h1>
-            </div>
-          </div>
-        </div>
-      </div>
+ 
     
+      <div class="site-cover site-cover-sm  overlay single-page"
+      style="background-image: url('{{ asset('image/about/1766604814724897.jpeg') }}');">
+      <div class="container">
+          <div class="row  justify-content-center">
+              <div class="">
+                  <div class="post-entry text-center">
+                      <h1 class="mb-4">Destinasi Wisata & News</h1>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
       <div class="section search-result-wrap">
         <div class="container">
           
-          <div class="row posts-entry">
+          <div class="row posts-entry rounded">
             <div class="col-lg-8">
     
               @foreach ($destinasis as $destinasi)  
@@ -59,8 +65,8 @@
                 </a>
                 <div>
                   <span class="date">{{$destinasi->created_at}}</span>
-                  <h2><a href="single.html">{{$destinasi->title}}</a></h2>
-                  <p><a href="{{$destinasi->href}}" class="btn btn-sm btn-outline-primary">Read More</a></p>
+                  <h2><a href="{{$destinasi->href}}" class="text-dark">{{$destinasi->title}}</a></h2>
+                  <p><a href="{{$destinasi->href}}" class="btn btn-sm btn-light text-white" style="background-color:#032A3B; ">Read More</a></p>
                 </div>
               </div>
             </div>
@@ -73,6 +79,8 @@
           </div>
         </div>
       </div>
+      
+      @include('partials._footer')
         <script src="{{asset('assets2/js/bootstrap.bundle.min.js')}}"></script>
         <script src="{{asset('assets2/js/tiny-slider.js')}}"></script>
     

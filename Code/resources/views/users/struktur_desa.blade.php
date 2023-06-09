@@ -27,7 +27,7 @@
 
 
     </head>
-
+    
     <body>
 
         <div class="site-mobile-menu site-navbar-target">
@@ -40,10 +40,10 @@
         </div>
 
 
-        <div class="site-cover site-cover-sm same-height overlay single-page"
+        <div class="site-cover site-cover-sm  overlay single-page"
             style="background-image: url('{{ asset('profil/profil.jpeg') }}');">
             <div class="container">
-                <div class="row same-height justify-content-center">
+                <div class="row  justify-content-center">
                     <div class="">
                         <div class="post-entry text-center">
                             <h1 class="mb-4">Profil Desa | Struktur Desa</h1>
@@ -85,18 +85,12 @@
                   
                 </div>
         </section>
+        @include('partials._footer')
 
 
 
 
-        <!-- Preloader -->
-        <div id="overlayer"></div>
-        <div class="loader">
-            <div class="spinner-border text-primary" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        </div>
-
+       
 
         <script src="{{ asset('assets2/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('assets2/js/tiny-slider.js') }}"></script>
