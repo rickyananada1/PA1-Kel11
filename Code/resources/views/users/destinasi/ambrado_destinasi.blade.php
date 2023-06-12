@@ -42,9 +42,9 @@
             <div class="site-mobile-menu-body"></div>
         </div>
         <div class="site-cover site-cover-sm same-height overlay single-page"
-            style="background-image: url('{{ asset('assets2/images/hero_8.jpg') }}');">
+            style="background-image: url('{{ asset('assets2/images/hero_8.jpeg') }}');">
             <div class="container">
-                <div class="row same-height justify-content-c   enter">
+                <div class="row same-height justify-content-center">
                     <div class="">
                         <div class="post-entry text-center">
                             <h1 class="mb-4">Destinasi Wisata | Pantai Lumban Binanga</h1>
@@ -62,49 +62,37 @@
 
                     <div class="col-md-12 col-lg-12 main-content text-dark">
                         <div class="post-content-body">
-                            <p class="fs-5">Desa Lumban Binanga adalah sebuah desa yang terletak di kecamatan Toba
-                                Samosir, Sumatera Utara, Indonesia. Desa ini memiliki luas wilayah sekitar [x] kilometer
-                                persegi dan jumlah penduduk sekitar [y] jiwa. Desa Lumban Binanga terletak di dataran
-                                tinggi yang dikelilingi oleh pegunungan dan danau, memberikan pemandangan alam yang
-                                indah.</p>
-
-                            <p class="fs-5">Desa Lumban Binanga memiliki sejarah yang kaya dan merupakan bagian dari
-                                wilayah kebudayaan Batak Toba. Masyarakat desa ini mayoritas bermata pencaharian sebagai
-                                petani, nelayan, dan pedagang. Mereka menggantungkan hidup dari hasil pertanian seperti
-                                padi, jagung, sayuran, serta hasil perikanan dari danau di sekitarnya.
+                            <p class="fs-5">
+                                Ambarado Cafe, Resto & Hotel, yang terletak di Lumban Binanga, Kecamatan Laguboti, Sumatera Utara, adalah sebuah destinasi yang menawarkan pengalaman yang menyenangkan bagi para pengunjungnya. Dengan kombinasi unik antara kafe, restoran, dan hotel, Ambarado menyediakan berbagai fasilitas untuk mengakomodasi kebutuhan dan keinginan pengunjungnya.
                             </p>
 
-                            <p class="fs-5">Selain kegiatan pertanian, Desa Lumban Binanga juga memiliki potensi
-                                pariwisata yang menarik. Keindahan alamnya, seperti pegunungan yang hijau dan Danau Toba
-                                yang luas, membuat desa ini menjadi tujuan wisata yang menarik bagi wisatawan lokal
-                                maupun mancanegara. Beberapa objek wisata yang terkenal di sekitar Desa Lumban Binanga
-                                antara lain [nama objek wisata], yang menawarkan keindahan alam dan kegiatan rekreasi
-                                yang menarik.</p>
+                            <p class="fs-5">
+                                Ketika Anda melangkah masuk ke dalam Ambarado Cafe, Resto & Hotel, Anda akan langsung diperhatikan oleh desain interior yang menawan. Suasana yang hangat dan nyaman diciptakan dengan kombinasi elemen-elemen modern dan nuansa tradisional. Dekorasi yang menarik dengan sentuhan lokal menciptakan atmosfer yang memikat dan memberikan pengalaman yang unik bagi para tamu.
+                            </p>
+
+                            <p class="fs-5">
+                                Kafe ini menawarkan beragam pilihan minuman yang lezat dan berkualitas. Anda dapat menikmati secangkir kopi segar yang disajikan dengan indah, berbagai jenis teh aromatik, atau minuman khas yang dihidangkan dengan penuh keahlian. Menu makanan ringan juga beragam, mulai dari roti dan kue yang lezat hingga hidangan penutup yang menggugah selera. Para pengunjung dapat menikmati santapan mereka sambil menikmati pemandangan sekitar atau berbincang dengan teman-teman di meja yang nyaman.
+                            </p>
 
 
                             <div class="row">
                                 <div class="col-md-12 mb-5 mt-5 d-flex justify-content-center align-items-center">
-                                    <img src="{{ asset('image/destinasi/1767326756838309.jpeg') }}"
+                                    <img src="{{ asset('image/destinasi/1768472693066728.jpeg') }}"
                                         alt="Image placeholder" class="img-fluid rounded pl-3 mx-auto"
                                         style="width: 500px;">
                                 </div>
                             </div>
 
 
-                            <p class="fs-5">Masyarakat Desa Lumban Binanga sangat menjunjung tinggi adat dan budaya
-                                Batak Toba. Mereka memiliki berbagai tradisi dan acara adat yang dijalankan secara turun
-                                temurun, seperti upacara perkawinan adat, adat istiadat dalam menghormati orang tua,
-                                serta berbagai festival dan perayaan keagamaan yang menjadi bagian penting dari
-                                kehidupan masyarakat desa.
-
+                            <p class="fs-5">
+                                Restoran di Ambarado Cafe, Resto & Hotel menyajikan hidangan utama yang lezat dan beragam. Dengan fokus pada masakan lokal dan internasional, restoran ini menghadirkan hidangan lezat yang menggabungkan cita rasa tradisional dengan sentuhan modern. Para koki berbakat menggunakan bahan-bahan segar dan berkualitas tinggi untuk menciptakan hidangan yang menggugah selera. Suasana restoran yang tenang dan elegan membuat makanan di Ambarado menjadi pengalaman yang tak terlupakan.
                             </p>
-                            <p class="fs-5">Pemerintahan desa di Lumban Binanga berupaya untuk meningkatkan kualitas
-                                hidup masyarakat dengan mengembangkan infrastruktur, pendidikan, dan kesehatan. Terdapat
-                                juga program-program pembangunan ekonomi yang bertujuan untuk meningkatkan kesejahteraan
-                                masyarakat desa.</p>
-                            <p class="fs-5">Dengan keindahan alam, kekayaan budaya, dan keramahan masyarakatnya, Desa
-                                Lumban Binanga merupakan tempat yang menarik untuk dikunjungi dan mengenal lebih jauh
-                                tentang kehidupan masyarakat Batak Toba.</p>
+                            <p class="fs-5">
+                                Selain sebagai kafe dan restoran, Ambarado juga menawarkan fasilitas penginapan di hotelnya. Dengan kamar yang luas, nyaman, dan dilengkapi dengan fasilitas modern, pengunjung dapat menikmati masa menginap yang menyenangkan di tempat ini. Staf yang ramah dan profesional siap membantu dalam memenuhi kebutuhan dan kenyamanan para tamu.
+                            </p>
+                            <p class="fs-5">
+                                Secara keseluruhan, Ambarado Cafe, Resto & Hotel adalah destinasi yang layak dikunjungi di Lumban Binanga, Kecamatan Laguboti, Sumatera Utara. Dengan suasana yang menawan, hidangan lezat, dan pelayanan yang ramah, Ambarado memberikan pengalaman yang memuaskan bagi pengunjungnya. Apakah Anda mencari tempat untuk bersantai, menikmati hidangan lezat, atau menginap semalam, Ambarado dapat menjadi pilihan yang sempurna.
+                            </p>
 
                         </div>
 

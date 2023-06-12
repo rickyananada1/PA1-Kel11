@@ -65,13 +65,6 @@
                                                 <x-jet-checkbox id="remember_me" name="remember" />
                                                 <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                                             </label>
-
-                                            @if (Route::has('password.request'))
-                                                <a class="underline text-sm text-gray-600 hover:text-gray-900"
-                                                    href="{{ route('password.request') }}">
-                                                    {{ __('Forgot your password?') }}
-                                                </a>
-                                            @endif
                                         </div>
 
                                         <div class="flex flex-col items-center justify-center mt-4">

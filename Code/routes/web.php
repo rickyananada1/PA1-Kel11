@@ -145,6 +145,15 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
         $destinasis = DB::table('destinasis')->get();
         return view('users.destinasi.pantai_destinasi',compact('destinasis'));
     })->name('destinasis');
+  
+    Route::get('/destinasi/ambrado',function(){
+        $destinasis = DB::table('destinasis')->get();
+        return view('users.destinasi.ambrado_destinasi',compact('destinasis'));
+    })->name('ambrado');
+
+
+
+    
 
     Route::get('/struktur/desa', function() {
         $struktur_desas = DB::table('struktur_desas')->get();
