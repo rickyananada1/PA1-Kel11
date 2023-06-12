@@ -98,8 +98,8 @@ class StrukturDesaController extends Controller
             ]);
 
             return redirect()
-                ->route('home.struktur')
-                ->with('success', 'Update Struktur successfully');
+                ->route('users.struktur')
+                ->with('success', 'Update Contact successfully');
         }
     }
 

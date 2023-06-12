@@ -1,3 +1,6 @@
+<title>
+    Forum
+</title>
 <x-app-layout>
 
     <head>

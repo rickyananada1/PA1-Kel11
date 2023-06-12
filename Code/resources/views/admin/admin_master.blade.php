@@ -9,6 +9,8 @@
     <title>lumbanbinaga.com Admin Dashborad</title>
 
     <!-- GOOGLE FONTS -->
+    <link rel="icon" href="assets5/beach.png">
+    
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500"
         rel="stylesheet" />
     <link href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css" rel="stylesheet" />
@@ -23,12 +25,8 @@
     <link href="{{ asset('backend/assets/plugins/daterangepicker/daterangepicker.css') }}" rel="stylesheet" />
 
     <!-- SLEEK CSS -->
-    <link id="sleek-css" rel="stylesheet" href="{{asset('backend/assets/css/sleek.css')}}" />
+    <link id="sleek-css" rel="stylesheet" href="{{ asset('backend/assets/css/sleek.css') }}" />
 
-
-
-
-  
     <script src="{{ asset('/backend/assets/plugins/nprogress/nprogress.js') }}"></script>
 </head>
 
@@ -56,8 +54,8 @@
                     <!-- search form -->
                     <div class="search-form d-none d-lg-inline-block">
                         <div class="input-group">
-                          
-                           
+
+
                         </div>
                         <div id="search-results-container">
                             <ul id="search-results"></ul>
@@ -75,32 +73,34 @@
                                 </a>
 
                             </li>
-                         
+
 
                             {{-- Tempat Admin Logout --}}
 
                             <!-- User Account -->
                             <li class="dropdown user-menu">
                                 <button href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                    <span class="d-none d-lg-inline-block"> <b>{{Auth::user()->name}}</b> </span>
+                                    <span class="d-none d-lg-inline-block"> <b>{{ Auth::user()->name }}</b> </span>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-right">
                                     <!-- User image -->
                                     <li class="dropdown-header">
                                         <div class="d-inline-block">
-                                            <b>{{Auth::user()->name}}</b> <small class="pt-1">{{Auth::user()->email}}</small>
+                                            <b>{{ Auth::user()->name }}</b> <small
+                                                class="pt-1">{{ Auth::user()->email }}</small>
                                         </div>
                                     </li>
 
                                     <li class="pb-3 cursor-pointer">
-                                        <a> 
+                                        <a>
                                             <form action="{{ route('logout.perform') }}" method="POST">
                                                 @csrf
-                                                <button type="submit" class="text-secondary "><i class="mdi mdi-logout pr-2 text-secondary"></i> Log Out</button>
-                                            </form>    
+                                                <button type="submit" class="text-secondary "><i
+                                                        class="mdi mdi-logout pr-2 text-secondary"></i> Log Out</button>
+                                            </form>
                                         </a>
-                                    </li >
-                                  
+                                    </li>
+
                                 </ul>
                             </li>
 
@@ -120,7 +120,7 @@
 
             <div class="content-wrapper">
                 <div class="content">
-                   {{-- 
+                    {{-- 
                     yield digunakan untuk menampilkan isi dari sebuah section
                     section itu yang mana halaman index yang akan dimasukan kedalam section
                     menggunakan directive section 
@@ -137,7 +137,8 @@
                 <div class="copyright bg-white">
                     <p>
                         &copy; <span id="copy-year"></span> Copyright lumbanbinaga.com Admin Dashboard by
-                        <a class="text-primary" href="https://github.com/samuelalbi11" target="_blank">Samuel Albi Pulo Sibarani</a>.
+                        <a class="text-primary" href="https://github.com/samuelalbi11" target="_blank">Samuel Albi Pulo
+                            Sibarani</a>.
                     </p>
                 </div>
                 <script>

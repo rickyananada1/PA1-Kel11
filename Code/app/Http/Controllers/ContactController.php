@@ -52,5 +52,71 @@ class ContactController extends Controller
         $messages = ContactForm::all();
         return view('admin.contact.message',compact('messages'));
     }
+
+    public function deleteMessage($id)
+    {
+        // Kode logika untuk menghapus data berdasarkan ID
+        
+        // Contoh: Menghapus data berdasarkan ID
+        $message = ContactForm::find($id);
+        if ($message) {
+            $message->delete();
+            // Tambahkan logika lainnya jika diperlukan
+        }
+        
+        return redirect()->back()->with('success', 'Data berhasil dihapus');
+    }
+
+    public function editContact($id)
+    {
+        $contact = Contact::find($id);
+        if ($contact) {
+            return view('admin.contact.edit_contact', compact('contact'));
+        } else {
+        }
+    }
+    
+    public function deleteContact($id)
+    {
+        $contact = Contact::find($id);
+        if ($contact) {
+            $contact->delete();
+        }
+        
+        return redirect()->back()->with('success', 'Data berhasil dihapus');
+    }
+
+    public function updateContact(Request $request, $id)
+    {
+        // Kode logika untuk update data berdasarkan ID
+        
+        // Validasi input form
+        $request->validate([
+            'address' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'created_at' => Carbon::now()
+
+        ]);
+        
+        // Cari data Contact berdasarkan ID
+        $contact = Contact::find($id);
+        if ($contact) {
+            // Update data dengan nilai yang baru
+            $contact->address = $request->address;
+            $contact->email = $request->email;
+            $contact->phone = $request->phone;
+            // Tambahkan logika lainnya jika diperlukan
+            $contact->save();
+            
+            return redirect()
+            ->route('admin.contact')
+            ->with('success', 'Update Struktur successfully');
+        } else {
+            // Tambahkan logika lainnya jika data tidak ditemukan
+        }
+    }
+    
+
 }
  

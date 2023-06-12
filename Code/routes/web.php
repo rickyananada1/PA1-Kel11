@@ -192,9 +192,12 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
     // Contact Page
     Route::get('/contact',[ContactController::class,'Contact'])->name('contact');
     Route::post('/contact/form',[ContactController::class,'ContactForm'])->name('contact.form');
+    Route::get('contact/edit/{id}', [ContactController::class, 'editContact'])->name('contact.edit');
+    Route::get('contact/delete/{id}', [ContactController::class, 'deleteContact'])->name('contact.delete');
+    Route::post('contact/update/{id}', [ContactController::class, 'updateContact'])->name('contact.update');
 
-
-
+    // Message Page
+    Route::get('message/delete/{id}', [ContactController::class, 'deleteMessage'])->name('message.delete');
 
 
 

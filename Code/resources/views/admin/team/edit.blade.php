@@ -12,7 +12,6 @@
                     <div class="card">
                         <div class="card-header">Edit Slider</div>
                         <div class="card-body">
-
                             {{-- Action itu adalah apa yang akan dilakukan saat button di click --}}
                             {{-- Perlu menambahkan fungsi enctype dimana kita akan merupah gambar --}}
                             <form action="{{ url('team/update/'.$teams->id) }}" method="POST" enctype="multipart/form-data">

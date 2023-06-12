@@ -1,10 +1,12 @@
+<link rel="icon" href="assets5/beach.png">
+
 <aside class="left-sidebar bg-sidebar">
     <div id="sidebar" class="sidebar sidebar-with-footer">
         <!-- Aplication Brand -->
 
         <div class="app-brand" >
             
-            <a href="#" >
+            <a href="/dashboard" >
               <img src="{{asset('logo/lumbanbinanga.jpeg')}}" class="user-image" alt="User Image" style="margin-left: -10px" />
                 <span class="brand-name" style="font-size: 14px; color: black; font-weight: bold ;margin-left: -6px">Admin Dashboard</span>
                 </a>

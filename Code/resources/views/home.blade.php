@@ -1,6 +1,9 @@
 @extends('layouts.master_home')
 
 @section('home_content')
+<title>
+    Website Lumban Binanga
+</title>
     <!-- ======= About Section ======= -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">

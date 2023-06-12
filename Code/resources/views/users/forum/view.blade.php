@@ -1,3 +1,7 @@
+<title>
+    {{ $forum->user->name }} Forum
+
+</title>
 <x-app-layout>
 
     <head>

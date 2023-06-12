@@ -1,3 +1,4 @@
+
 <x-app-layout>
     <!doctype html>
     <html lang="en">
@@ -28,6 +29,7 @@
         <link rel="stylesheet" href="{{asset('assets6/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets6/swiper-bundle.min.css')}}">
         <link rel="stylesheet" href="{{asset('assets6/boxicons.min.css')}}">
+        <link rel="icon" href="assets5/beach.png">
 
     </head>
     
